@@ -3,7 +3,9 @@
 "id":1,
 "CourseNumber":"CS145",
 "CourseName":"Algorithm Design 1",
-"CourseMajors":"Computer Science,Computer information Systems"
+"CourseMajors":"Computer Science,Computer information Systems",
+"CreditHourse":"4",
+"Grades":"4.0"
 },
 {
 "id":2,

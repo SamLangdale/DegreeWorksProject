@@ -4,13 +4,33 @@
 "CourseNumber":"CS145",
 "CourseName":"Algorithm Design 1",
 "CourseMajors":"Computer Science,Computer information Systems",
-"CreditHourse":"4",
-"Grades":"4.0"
+"CreditHours":"4",
+"Grades":"4.0",
+"PreReq":[{
+    "CoReq":[{
+            "CourseNumber":"CSCE145",
+            "Subject":"Computer Science"
+        }],
+    "Subject":"Computer Science",
+    "CourseNumber":"CSCE145",
+    "Grades":["A, B, C, D, F"]
+}]
 },
 {
 "id":2,
 "CourseNumber":"CS146",
 "CourseName":"Algorithm Design 2",
-"CourseMajors":"Computer Science,Computer information Systems"
+"CourseMajors":"Computer Science,Computer information Systems",
+"CreditHours":"4",
+"Grades":"4.0",
+"PreReq":[{
+    "CoReq":[{
+            "CourseNumber":"CSCE145",
+            "Subject":"Computer Science"
+        }],
+    "Subject":"Computer Science",
+    "CourseNumber":"CSCE145",
+    "Grades":["A, B, C, D, F"]
+}]
 }
 ]

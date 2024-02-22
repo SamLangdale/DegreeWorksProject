@@ -1,0 +1,32 @@
+[
+{
+    "name": "Computer Science",
+    "id":"dad6314f-f5d5-49ec-a922-fddcce5068b0",
+    "requirements": {
+        "CreditType": "Computer_Science",
+        "Elective": {
+            "title": "Computer Science",
+            "coures": ["CSCE145","CSCE146","CSCE190","CSCE215","CSCE211","CSCE212","CSCE240","CSCE311","CSCE611",
+            "CSCE274","CSCE222","CSCE313","CSCE350","CSCE390","CSCE490","CSCE416","CSCE492","CSCE491","ENGL101",
+            "ENGL102","ENGL462","ENGL463","MATH141","MATH142","MATH374","MATH241","MATH344","MATH344L","CHEM111",
+            "CHEM111L","CHEM112","CHEM112L","PHYS211","PHYS211L","STAT509"],
+            "creditHours": "81"
+    }
+}
+},
+{
+    "name": "Computer information System",
+    "id":"a13977a5-39a1-4c49-99cd-3ea040d2ec4f",
+    "requirements": {
+        "CreditType": "Computer_information_System",
+        "Elective": {
+            "title": "Computer information System",
+            "coures": ["CSCE145","CSCE190","CSCE146","CSCE215","CSCE242","CSCE205","CSCE210","CSCE247","CSCE201","CSCE240",
+            "CSCE350","CSCE390","CSCE520","CSCE594","CSCE490","CSCE416","CSCE522","ENGL101","MATH122","MATH141","ENGL102",
+            "ECON224","MATH174","MATH374","MGSC290","STAT515","STAT509","ACCT222","MGMT371","ENGL462","ENGL463","STAT516"],
+            "creditHours": "84"
+    }
+}
+}
+]
+

@@ -1,0 +1,14 @@
+[
+{
+"id":1,
+"CourseNumber":"CS145",
+"CourseName":"Algorithm Design 1",
+"CourseMajors":"Computer Science,Computer information Systems"
+},
+{
+"id":2,
+"CourseNumber":"CS146",
+"CourseName":"Algorithm Design 2",
+"CourseMajors":"Computer Science,Computer information Systems"
+}
+]

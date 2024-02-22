@@ -1,12 +1,12 @@
 [
 {
-"id":1,
+"uuid":"de2bd333-178b-43bc-8709-b153df4527ce",
 "CourseNumber":"CS145",
 "CourseName":"Algorithm Design 1",
 "CourseMajors":"Computer Science,Computer information Systems"
 },
 {
-"id":2,
+"uuid":"21dd89cb-8a05-461f-becc-d5a8376d2810",
 "CourseNumber":"CS146",
 "CourseName":"Algorithm Design 2",
 "CourseMajors":"Computer Science,Computer information Systems"

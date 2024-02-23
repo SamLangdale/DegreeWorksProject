@@ -1,0 +1,23 @@
+{
+    "studentprofileid": "24ac8867-619f-475e-b761-cfc349673632",
+    
+    "Majorid": "dad6314f-f5d5-49ec-a922-fddcce5068b0",
+    "minor": "",
+    "GPA": 3.5,
+    "takenCoures": [
+       {
+        "Couresid":"de2bd333-178b-43bc-8709-b153df4527ce"
+       }
+    ],
+    "CurrentCoures": [
+        {
+            "Couresuuid":"21dd89cb-8a05-461f-becc-d5a8376d2810"
+        }
+
+    ],
+    "RequiredCoures": [
+        {
+            
+        }
+    ]
+}

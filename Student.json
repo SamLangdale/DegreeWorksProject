@@ -1,0 +1,26 @@
+{
+    "uuid": "1b4cea67-9684-4fb4-a24d-ba81c820c59f",
+    "UserType": "Student",
+    "Username": "ypl15",
+    "Password": "gococks123",
+    "firstName": "yi",
+    "lastName": "liu",
+    "Email": "yiliu@email.sc.edu",
+    "USCID": "t666785",
+    "notes": [{
+        "title": "Close to losing scholarship",
+        "date": "12/12/23",
+        "content": "Liu you're close to losing your Life scholarship"
+    }],
+    "studentProfile": {
+        "Major": "dad6314f-f5d5-49ec-a922-fddcce5068b0",
+        "Minor": "",
+        "GPA": 3.5,
+        "Student ID": 12345,
+        "TakenCourses": [],
+        "CurrentCourses": [],
+        "RequiredCourses": [],
+        "Grades": []
+    },
+    "warning": ["Failing", "Risk_Of_Losing_Scholarship", "Risk_Of_Completely_Failing"]
+}

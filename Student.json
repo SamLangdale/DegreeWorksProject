@@ -1,0 +1,12 @@
+{
+    "Studentid": "1b4cea67-9684-4fb4-a24d-ba81c820c59f",
+    "notes": [
+        {
+            "title": "Close to losing scholarship",
+            "date": "12/12/23",
+            "content": "Liu you're close to losing your Life scholarship"
+        }
+    ],
+    "studentProfileid": "24ac8867-619f-475e-b761-cfc349673632",
+    "warnings": ["Failing", "Risk_Of_Losing_Scholarship", "Risk_Of_Completely_Failing"]
+}

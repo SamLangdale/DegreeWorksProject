@@ -5,7 +5,7 @@ public class uuid {
         
 
     String uuid = UUID.randomUUID().toString();
-    System.out.println(uuid);
+    System.out.println("the UUID:"+ uuid);
     }
 
     

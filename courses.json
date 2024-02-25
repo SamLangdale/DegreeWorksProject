@@ -1,11 +1,11 @@
 [
 {
-"uuid":"de2bd333-178b-43bc-8709-b153df4527ce",
-"CourseNumber":"CS145",
+"Couresid":"de2bd333-178b-43bc-8709-b153df4527ce",
+"CourseNumber":"145",
 "CourseName":"Algorithm Design 1",
 "CourseMajors":"Computer Science,Computer information Systems",
 "CreditHours":"4",
-"Grades":"4.0",
+"Grades":["A, B, C, D, F"],
 "PreReq":[{
     "CoReq":[{
             "CourseNumber":"CSCE145",
@@ -17,12 +17,12 @@
 }]
 },
 {
-"uuid":"21dd89cb-8a05-461f-becc-d5a8376d2810",
-"CourseNumber":"CS146",
+"Couresid":"21dd89cb-8a05-461f-becc-d5a8376d2810",
+"CourseNumber":"146",
 "CourseName":"Algorithm Design 2",
 "CourseMajors":"Computer Science,Computer information Systems",
 "CreditHours":"4",
-"Grades":"4.0",
+"Grades":["A, B, C, D, F"],
 "PreReq":[{
     "CoReq":[{
             "CourseNumber":"CSCE145",
@@ -32,5 +32,10 @@
     "CourseNumber":"CSCE145",
     "Grades":["A, B, C, D, F"]
 }]
+},
+{
+    "Couresid":"a4e83bb5-d88d-4f7f-b71a-7a1e0da81bfd",
+    "CourseNumber":"190"
 }
+
 ]

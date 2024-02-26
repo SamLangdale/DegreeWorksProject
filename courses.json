@@ -1,41 +1,1444 @@
 [
-{
-"Couresid":"de2bd333-178b-43bc-8709-b153df4527ce",
-"CourseNumber":"145",
-"CourseName":"Algorithm Design 1",
-"CourseMajors":"Computer Science,Computer information Systems",
-"CreditHours":"4",
-"Grades":["A, B, C, D, F"],
-"PreReq":[{
-    "CoReq":[{
-            "CourseNumber":"CSCE145",
-            "Subject":"Computer Science"
-        }],
-    "Subject":"Computer Science",
-    "CourseNumber":"CSCE145",
-    "Grades":["A, B, C, D, F"]
-}]
-},
-{
-"Couresid":"21dd89cb-8a05-461f-becc-d5a8376d2810",
-"CourseNumber":"146",
-"CourseName":"Algorithm Design 2",
-"CourseMajors":"Computer Science,Computer information Systems",
-"CreditHours":"4",
-"Grades":["A, B, C, D, F"],
-"PreReq":[{
-    "CoReq":[{
-            "CourseNumber":"CSCE145",
-            "Subject":"Computer Science"
-        }],
-    "Subject":"Computer Science",
-    "CourseNumber":"CSCE145",
-    "Grades":["A, B, C, D, F"]
-}]
-},
-{
-    "Couresid":"a4e83bb5-d88d-4f7f-b71a-7a1e0da81bfd",
-    "CourseNumber":"190"
-}
+    {
+        "Couresid": "de2bd333-178b-43bc-8709-b153df4527ce",
+        "CourseNumber": "145",
+        "CourseAcronym": "CSCE",
+        "CourseName": "Algorithmic Design I",
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CreditHours": 4,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName": "Basic College Mathematics",
+                "CourseNumber": "111",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CoureName": " Precalculus Mathematics",
+                "CourseNumber": "115",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": [
+            {
+                "CourseName": "Basic College Mathematics",
+                "CourseNumber": "111",
+                "CourseAcronym": "MATH"
+            },
+            {
+                "CourseName": " Precalculus Mathematics",
+                "CourseNumber": "115",
+                "CourseAcronym": "MATH"
+            }
+        ]
+    },
+    {
+        "Couresid": "5038e79d-df2e-47d0-88d6-ab3c10dba718",
+        "CourseNumber": "146",
+        "CourseAcronym": "CSCE",
+        "CourseName": "Algorithm Design II",
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CreditHours": 4,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName":" Algorithmic Design 1",
+                "CourseNumber": "145",
+                "CourseAcronym":"CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Basic College Mathematics",
+                "CourseNumber": "111",
+                "CourseAcronym": "MATH",
+                "Grades": ["A","B","C","D","F"]
+            },
+            {
+                "CourseName": "Trigonometry",
+                "CourseNumber": "112",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseName": "Precalculus Mathematics ",
+                "CourseNumber": "115",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseName": " Brief Precalculus Mathematics ",
+                "CourseNumber": "116",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseName": " Calculus for Business Administration and Social Sciences",
+                "CourseNumber": "122",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseName":"Calculus I",
+                "CourseNumber": "141",
+                "CourseAcronym":"MATH",
+                "Grades": ["A","B","C","D","F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "a2db5d52-8dea-499d-aacf-49369bf65d22",
+        "CourseNumber": "190",
+        "CourseAcronym": "CSCE",
+        "CourseName": "Computing in the Modern World",
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CreditHours": 1,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName":" Algorithmic Design 1",
+                "CourseNumber": "145",
+                "CourseAcronym":"CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Business Applications Programming",
+                "CourseNumber": "205",
+                "CourseAcronym":"CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "c6cd74bf-7819-498b-a0d9-4f051153735d",
+        "CourseNumber": "215",
+        "CourseAcronym": "CSCE",
+        "CourseName": "UNIX/Linux Fundamentals",
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CreditHours": 1,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq":[
+            {
+                "CourseName":" Algorithmic Design 1",
+                "CourseNumber": "145",
+                "CourseAcronym":"CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq":[]
+    },
+    {
+        "Couresid":"978e7047-d3fa-43b4-b1a0-22a2b012c068",
+        "CourseNumber": "211",
+        "CourseAcronym": "CSCE",
+        "CourseName": " Digital Logic Design",
+        "CourseMajors": ["Computer Science"],
+        "CreditHours": 3,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName":"Calculus 1",
+                "CourseNumber": "141",
+                "CourseAcronym":"MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq":[]
+    },
+    {
+        "Couresid":"92a154b1-6704-4443-a4df-43f81e0f3cda",
+        "CourseNumber": "212",
+        "CourseAcronym": "CSCE",
+        "CourseName": "Intro. to Computer Architecture",
+        "CourseMajors": ["Computer Science"],
+        "CreditHours": 3,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName":"Digital Logic Design",
+                "CourseNumber": "211",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName":"Algorithmic Design I",
+                "CourseNumber": "145",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid":"8627844d-13d7-4571-b654-722a340ad0ea",
+        "CourseNumber": "240",
+        "CourseAcronym": "CSCE",
+        "CourseName": "Advanced Programming Techniques",
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CreditHours": 3,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName":"UNIX/Linux Fundamentals",
+                "CourseNumber": "215",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName":" Algorithmic Design II",
+                "CourseNumber": "146",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq":[]
 
+    },
+    {
+        "Couresid": "055806b1-c0ea-4530-a383-1e7345318b0a",
+        "CourseNumber": "311",
+        "CourseAcronym": "CSCE",
+        "CourseName": "Operating Systems",
+        "CourseMajors":["Computer Science"],
+        "CreditHours": 3,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName": "Advanced Programming Techniques",
+                "CourseNumber": "240",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Computer Hardware Foundations",
+                "CourseNumber": "210",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Intro. to Computer Architecture",
+                "CourseNumber": "212",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []   
+    },
+    {
+        "Couresid": "07fb3566-bb2d-40c6-a63d-14aa7bcc2951",
+        "CourseNumber": "247",
+        "CourseAcronym": "CSCE",
+        "CourseName": " Software Engineering",
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CreditHours": 3,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName": " Algorithmic Design II",
+                "CourseNumber": "146",
+                "CourseAcronym":"CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq":[]
+    },
+    {
+        "Couresid": "ddf4edf0-89d5-447a-b896-615cd9b9d927",
+        "CourseNumber": "330",
+        "CourseAcronym": "CSCE",
+        "CourseName": " Prog. Lang. Structures",
+        "CourseMajors":["Computer Science"],
+        "CreditHours": 3,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": true,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName": "Advanced Programming Techniques",
+                "CourseNumber": "240",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Discrete Math. for Computer Sci.",
+                "CourseNumber": "174",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Discrete Structures",
+                "CourseNumber": "374",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": " Discrete Mathematics I",
+                "CourseNumber": "574",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "396c15a9-1fff-4302-8792-656a911d891f",
+        "CourseNumber": "350",
+        "CourseAcronym": "CSCE",
+        "CourseName": "Data Structures & Algorithms",
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CreditHours": 3,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName": "Advanced Programming Techniques",
+                "CourseNumber": "240",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Discrete Math. for Computer Sci.",
+                "CourseNumber": "174",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Discrete Structures",
+                "CourseNumber": "374",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": " Discrete Mathematics I",
+                "CourseNumber": "574",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Calculus I",
+                "CourseNumber": "141",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": " Calculus for Business Administration and Social Sciences",
+                "CourseNumber": "122",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "103e78cb-0eb7-4d3c-9ed4-98c183644038",
+        "CourseNumber": "390",
+        "CourseAcronym": "CSCE",
+        "CourseName": " Prof. Issues in Comp. Sci. Engr.",
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CreditHours": 1,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [],
+        "CoReq": []
+    },
+    {
+        "Couresid": "748034f5-d1d4-4e76-ad38-18fc116a7a04",
+        "CourseNumber": "416",
+        "CourseAcronym": "CSCE",
+        "CourseName": "Intro. to Computer Networks",
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CreditHours": 3,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName":" Algorithmic Design II",
+                "CourseNumber": "146",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "cb9f0891-e9f0-4c00-85bf-7b7fa37fd790",
+        "CourseNumber": "490",
+        "CourseAcronym": "CSCE",
+        "CourseName": "Capstone Computing Project I",
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CreditHours": 3,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": true,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName": "Advanced Programming Techniques",
+                "CourseNumber": "240",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Data Structures & Algorithms",
+                "CourseNumber": "350",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": [
+            {
+                "CourseName": "Data Structures & Algorithms",
+                "CourseNumber": "350",
+                "CourseAcronym": "CSCE"
+                
+            }
+        ]
+    },
+    {
+        "Couresid": "a4ca384c-bd03-4901-b2a7-94ee9dacc1ea",
+        "CourseNumber": "492",
+        "CourseAcronym":"CSCE",
+        "CourseName": "Capstone Computing Project II",
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CreditHours": 3,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": true,
+        "PreReq": [
+            {
+                "CourseName": "Advanced Programming Techniques",
+                "CourseNumber": "240",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Data Structures & Algorithms",
+                "CourseNumber": "350",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Capstone Computing Project I",
+                "CourseNumber": "490",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq":[]
+    },
+    {
+        "Couresid": "5ce67910-feba-4560-bd17-a37ed84d982f",
+        "CourseNumber": "242",
+        "CourseName": " Web Applications",
+        "CourseMajors": ["Computer Information Systems"],
+        "CourseAcronym":"CSCE",
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "PreReq":[
+            {
+                "CourseName":" Algorithmic Design II",
+                "CourseNumber": "146",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq":[]
+
+    },
+    {
+        "Couresid": "c3cf772d-6035-42bd-a683-27c800ccff59",
+        "CourseNumber": "205",
+        "CourseName": "Business Applications Programming",
+        "CourseMajors": ["Computer Information Systems"],
+        "CourseAcronym":"CSCE",
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "Computer Information Systems in Business",
+                "CourseNumber": "290",
+                "CourseAcronym": "MGSC",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": " Introduction to Computer Concepts",
+                "CourseNumber": "101",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "General Applications Programming",
+                "CourseNumber": "102",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": " Algorithmic Design I",
+                "CourseNumber": "145",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": " Algorithmic Design II",
+                "CourseNumber": "146",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "c51d27d9-bc19-4361-8d3b-97e61e5c9444",
+        "CourseName": " Computer Hardware Foundations",
+        "CourseAcronym":"CSCE",
+        "CourseNumber": "210",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": true,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "Algorithm Design I",
+                "CourseNumber": "145",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName":" Business Applications Programming",
+                "CourseNumber": "205",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "UNIX System Administration ",
+                "CourseNumber": "207",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq":[]
+    },
+    {
+        "Couresid": "d6533637-d1b5-4bc1-bd0b-9e00c7b4aadb",
+        "CourseName": "Introduction to Computer Security",
+        "CourseAcronym":"CSCE",
+        "CourseNumber": "201",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": " Introduction to Computer Concepts",
+                "CourseNumber": "101",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "General Applications Programming",
+                "CourseNumber": "102",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName":" Algorithmic Design II",
+                "CourseNumber": "146",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": [
+            {
+                "CourseName": " Introduction to Computer Concepts",
+                "CourseNumber": "101",
+                "CourseAcronym": "CSCE"
+            },
+            {
+                "CourseName": "General Applications Programming",
+                "CourseNumber": "102",
+                "CourseAcronym": "CSCE"
+            },
+            {
+                "CourseName":" Algorithmic Design II",
+                "CourseNumber": "146",
+                "CourseAcronym": "CSCE"
+            }
+        ]
+    },
+    {
+        "Couresid": "076c9c96-b100-4ded-bbdf-55b352fd7de4",
+        "CourseName": "Database System Design",
+        "CourseAcronym":"CSCE",
+        "CourseNumber": "520",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "Advanced Programming Techniques",
+                "CourseNumber": "240",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Advanced Geographic Information Systems",
+                "CourseNumber": "563",
+                "CourseAcronym": "GEOG",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "e2321546-8dbe-4897-9770-c4857648bf15",
+        "CourseName": "Strategic Mgmt. of Info. Systems",
+        "CourseAcronym":"CSCE",
+        "CourseNumber": "594",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": false,
+        "spring": true,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [],
+        "CoReq": []
+    },
+    {
+        "Couresid": "2c4db419-e9e4-4104-a939-8d2ed7055edf",
+        "CourseName": " Information Security Principles",
+        "CourseAcronym":"CSCE",
+        "CourseNumber": "522",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": true,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName":" Algorithmic Design II",
+                "CourseNumber": "146",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Discrete Math. for Computer Sci.",
+                "CourseNumber": "174",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Discrete Structures",
+                "CourseNumber": "374",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq":[]
+    },
+    {
+        "Couresid": "6817178c-5750-4b52-9045-1d7bfe373756",
+        "CourseName": "Critical Reading and Composition",
+        "CourseAcronym":"ENGL",
+        "CourseNumber": "101",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Science","Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [],
+        "CoReq": []
+    },
+    {
+        "Couresid": "1e3feea0-36cf-49ce-a9c0-79207cd37b05",
+        "CourseName": "Calculus I",
+        "CourseAcronym":"MATH",
+        "CourseNumber": "141",
+        "CreditHours": 4,
+        "CourseMajors": ["Computer Science","Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "Trigonometry",
+                "CourseNumber": "112",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseName": " Precalculus Mathematics",
+                "CourseNumber": "115",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseNumber": " Brief Precalculus Mathematics",
+                "CourseName": "116",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            }
+
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "fc82053c-723f-4562-a7f1-5ddbcbdebda2",
+        "CourseName": " Calculus for Business Administration and Social Sciences",
+        "CourseAcronym":"MATH",
+        "CourseNumber": "122",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "Basic College Mathematics",
+                "CourseNumber": "111",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Intensive Basic College Mathematics ",
+                "CourseNumber": "111L",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName":"Precalculus Mathematics",
+                "CourseNumber": "115",
+                "CourseAcronym":"MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "f3ecddc7-37c0-4240-85c0-b054ad24f7c7",
+        "CourseName": "Rhetoric and Composition",
+        "CourseAcronym":"ENGL",
+        "CourseNumber": "102",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Science","Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "Critical Reading and Composition",
+                "CourseNumber": "101",
+                "CourseAcronym": "ENGL",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "685807d6-4c5a-41ef-94bf-562ac650d3be",
+        "CourseName": "Calculus II",
+        "CourseAcronym":"MATH",
+        "CourseNumber": "142",
+        "CreditHours": 4,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "Calculus I",
+                "CourseNumber": "141",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "4896c132-b8ad-411d-ba4f-1bf66fa88186",
+        "CourseName": "General Chemistry I",
+        "CourseAcronym":"CHEM",
+        "CourseNumber": "111",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "Basic College Mathematics",
+                "CourseNumber": "111",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Precalculus Mathematics ",
+                "CourseNumber": "115",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseName": " Calculus for Business Administration and Social Sciences",
+                "CourseNumber": "122",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseName": "Calculus I",
+                "CourseNumber": "141",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": [
+            {
+                "CourseName": "General Chemistry I Lab",
+                "CourseNumber": "111L",
+                "CourseAcronym": "CHEM"
+            }
+        ]
+    },
+    {
+        "Couresid": "c8348e44-5636-463c-b845-85e8f7afdbd0",
+        "CourseName": "Essentials of Physics I",
+        "CourseAcronym":"PHYS",
+        "CourseNumber": "211",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "Calculus I",
+                "CourseNumber": "141",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": " Essentials of Physics I Lab",
+                "CourseNumber": "211L",
+                "CourseAcronym": "PHYS",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": [
+            {
+                "CourseName": " Essentials of Physics I Lab",
+                "CourseNumber": "211L",
+                "CourseAcronym": "PHYS"
+            }
+        ]
+    },
+    {
+        "Couresid": "7207a129-db44-4173-a610-568812575d0e",
+        "CourseName": "General Chemistry I Lab",
+        "CourseAcronym":"CHEM",
+        "CourseNumber": "111L",
+        "CreditHours": 1,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "Basic College Mathematics",
+                "CourseNumber": "111",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CoureName": " Precalculus Mathematics",
+                "CourseNumber": "115",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "General Chemistry I",
+                "CourseNumber": "111",
+                "CourseAcronym": "CHEM",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": [
+            {
+                "CourseName": "General Chemistry I",
+                "CourseNumber": "111",
+                "CourseAcronym": "CHEM"
+                
+            }
+        ]      
+    },
+    {
+        "Couresid": "bdcb6228-50a2-4237-bbb0-41075649b7ff",
+        "CourseName": "Essentials of Physics I Lab",
+        "CourseAcronym":"PHYS",
+        "CourseNumber": "211L",
+        "CreditHours": 1,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": " Essentials of Physics I",
+                "CourseNumber": "211",
+                "CourseAcronym": "PHYS",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": [
+            {
+                "CourseName": " Essentials of Physics I Lab",
+                "CourseNumber": "211L",
+                "CourseAcronym": "PHYS"
+            }
+        ]
+    },
+    {
+        "Couresid": "47a5cbe5-32c8-4ee8-aa99-e667bd947a5c",
+        "CourseName": " Discrete Structures",
+        "CourseAcronym":"MATH",
+        "CourseNumber": "374",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName":"Calculus II",
+                "CourseNumber": "142",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName":" Algorithmic Design II",
+                "CourseNumber": "146",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "43903212-b339-48d4-a919-b30fefd8ffc8",
+        "CourseName": "General Chemistry II",
+        "CourseAcronym":"CHEM",
+        "CourseNumber": "112",
+        "CreditHours": 4,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "General Chemistry I",
+                "CourseNumber": "111",
+                "CourseAcronym": "CHEM",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName":"Principles of Chemistry I",
+                "CourseNumber": "141",
+                "CourseAcronym":"CHEM",
+                "Grades": ["A","B","C","D","F"]
+            },
+            {
+                "CourseName": "Basic College Mathematics",
+                "CourseNumber": "111",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Precalculus Mathematics ",
+                "CourseNumber": "115",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseName": " Calculus for Business Administration and Social Sciences",
+                "CourseNumber": "122",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseName":"Calculus I",
+                "CourseNumber": "141",
+                "CourseAcronym":"MATH",
+                "Grades": ["A","B","C","D","F"]
+            }
+        ],
+        "CoReq":[
+            {
+                "CourseName":" General Chemistry II Lab",
+                "CourseNumber": "112L",
+                "CourseAcronym":"CHEM"
+            }
+        ]
+    },
+    {
+        "Couresid": "b637f9a8-3299-46ec-816a-e48393bc7210",
+        "CourseName": "Essentials of Physics II",
+        "CourseAcronym":"PHYS",
+        "CourseNumber": "212",
+        "CreditHours": 4,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName":" Essentials of Physics I",
+                "CourseNumber": "211",
+                "CourseAcronym":"PHYS",
+                "Grades": ["A","B","C","D","F"]
+            },
+            {
+                "CourseName":"Calculus II",
+                "CourseNumber": "142",
+                "CourseAcronym":"MATH",
+                "Grades": ["A","B","C","D","F"]
+            }
+        ],
+        "CoReq":[
+            {
+                "CourseName":" Essentials of Physics II Lab",
+                "CourseNumber": "212L",
+                "CourseAcronym":"PHYS"
+            }
+        ]
+    },
+    {
+        "Couresid": "ea35e6e7-827c-4b48-bde9-a27545cb692c",
+        "CourseName": "General Chemistry II Lab",
+        "CourseAcronym":"CHEM",
+        "CourseNumber": "112L",
+        "CreditHours": 1,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CourseName": "General Chemistry I",
+                "CourseNumber": "111",
+                "CourseAcronym": "CHEM",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "General Chemistry I Lab",
+                "CourseNumber": "111L",
+                "CourseAcronym": "CHEM",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName":"Calculus I",
+                "CourseNumber": "141",
+                "CourseAcronym":"MATH",
+                "Grades": ["A","B","C","D","F"]
+            },
+            {
+                "CourseName": "General Chemistry II",
+                "CourseNumber": "112",
+                "CourseAcronym": "CHEM",
+                "Grades": ["A","B","C","D","F"]
+            }
+        ],
+        "CoReq":[
+            {
+                "CourseName": "General Chemistry II",
+                "CourseNumber": "112",
+                "CourseAcronym": "CHEM"
+            }
+        ]
+    },
+    {
+        "Couresid": "ddab7e11-ccd5-4fc3-843e-0e5e0f6e07f3",
+        "CourseName": "Essentials of Physics II Lab",
+        "CourseAcronym":"PHYS",
+        "CourseNumber": "212L",
+        "CreditHours": 1,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "PreReq": [
+            {
+                "CoureName": "Essentials of Physics II",
+                "CourseNumber": "212",
+                "CourseAcronym": "PHYS",
+                "Grades": ["A","B","C","D","F"]
+            }
+        ],
+        "CoReq": [
+            {
+                "CoureName": "Essentials of Physics II",
+                "CourseNumber": "212",
+                "CourseAcronym": "PHYS"
+            }
+        ]
+    },
+    {
+        "Couresid": "800b1d06-d2ae-4ff5-b6d4-ebbe84765bb2",
+        "CourseName": " Introduction to Economics",
+        "CourseAcronym":"ECON",
+        "CourseNumber": "224",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [],
+        "CoReq":[]
+    },
+    {
+        "Couresid": "905090d5-fccc-48f8-aeaf-8de3ae1b2fbc",
+        "CoureName": "Vector Calculus",
+        "CourseAcronym": "MATH",
+        "CourseNumber": "241",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName":"Calculus II",
+                "CourseNumber": "142",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq":[]
+    },
+    {
+        "Couresid": "74886278-4eb5-46bb-bb97-e23ddc545a86",
+        "CoureName": "Discrete Math. for Computer Sci.",
+        "CourseAcronym": "MATH",
+        "CourseNumber": "174",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName": "Trigonometry",
+                "CourseNumber": "112",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            }
+        ],
+        "CoReq": []
+
+    },
+    {
+        "Couresid": "6aa741e0-0bbc-4d45-a7f3-87805b307af7",
+        "CoureName": "Computer Information Systems in Business",
+        "CourseAcronym": "MGSC",
+        "CourseNumber": "290",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [],
+        "CoReq": []
+
+    },
+    {
+        "Couresid": "6a9eceb1-1ee4-4a39-aaca-76003c44efef",
+        "CoureName": "Technical Writing",
+        "CourseAcronym": "ENGL",
+        "CourseNumber": "462",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Science","Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName": "Critical Reading and Composition",
+                "CourseNumber": "101",
+                "CourseAcronym": "ENGL",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": " Rhetoric and Composition",
+                "CourseNumber": "102",
+                "CourseAcronym": "ENGL",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "536c5a27-df22-4bca-a79e-68801df70ac0",
+        "CoureName": "Business Writing",
+        "CourseAcronym": "ENGL",
+        "CourseNumber": "463",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Science","Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName": "Critical Reading and Composition",
+                "CourseNumber": "101",
+                "CourseAcronym": "ENGL",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": " Rhetoric and Composition",
+                "CourseNumber": "102",
+                "CourseAcronym": "ENGL",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "0ff8c6ad-10fb-49b7-8b4a-a16f96381eab",
+        "CoureName": "Survey of Accounting",
+        "CourseAcronym": "ACCT",
+        "CourseNumber": "222",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName": " Calculus for Business Administration and Social Sciences",
+                "CourseNumber": "122",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseName":"Calculus I",
+                "CourseNumber": "141",
+                "CourseAcronym":"MATH",
+                "Grades": ["A","B","C","D","F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "ddec87c5-6033-4457-8eb1-f0c9edfcbd4f",
+        "CoureName": "Principles of Management",
+        "CourseAcronym": "MGMT",
+        "CourseNumber": "371",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [],
+        "CoReq": []
+    },
+    {
+        "Couresid": "3bab6690-3004-460c-9544-7b431e6f44fc",
+        "CoureName": "Statistical Methods I",
+        "CourseAcronym": "STAT",
+        "CourseNumber": "515",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName": " Calculus for Business Administration and Social Sciences",
+                "CourseNumber": "122",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CourseName":"Calculus I",
+                "CourseNumber": "141",
+                "CourseAcronym":"MATH",
+                "Grades": ["A","B","C","D","F"]
+            },
+            {
+                "CourseName": "Basic College Mathematics",
+                "CourseNumber": "111",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Trigonometry",
+                "CourseNumber": "112",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            },
+            {
+                "CoureName": " Precalculus Mathematics",
+                "CourseNumber": "115",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": " Brief Precalculus Mathematics ",
+                "CourseNumber": "116",
+                "CourseAcronym": "MATH",
+                "Grades":["A","B","C","D","F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "37ff6b3b-50ff-427c-a0ea-bdf12e6b42f1",
+        "CoureName": "Statistics for Engineers",
+        "CourseAcronym": "STAT",
+        "CreditHours": 3,
+        "CourseNumber": "509",
+        "CourseMajors": ["Computer Science","Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName":"Calculus II",
+                "CourseNumber": "142",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "c3b12f1b-bbb9-48a7-b8f3-b00cd5d04fac",
+        "CoureName": "Foundations of Computation",
+        "CourseAcronym": "CSCE",
+        "CreditHours": 3,
+        "CourseNumber": "355",
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName":"Digital Logic Design",
+                "CourseNumber": "211",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Intro. to Computer Architecture",
+                "CourseNumber": "212",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CourseName": "Data Structures & Algorithms",
+                "CourseNumber": "350",
+                "CourseAcronym": "CSCE",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "df6ebe9c-02c9-435b-8fd1-f6bd974661cc",
+        "CoureName": "Applied Linear Algebra",
+        "CourseAcronym": "MATH",
+        "CourseNumber": "344",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CourseName":"Calculus II",
+                "CourseNumber": "142",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": []
+    },
+    {
+        "Couresid": "20a41543-868a-4d12-abc8-f1aeba1fda0d",
+        "CoureName": "Applied Linear Algebra Lab",
+        "CourseAcronym": "MATH",
+        "CourseNumber": "344L",
+        "CreditHours": 1,
+        "CourseMajors": ["Computer Science"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CoureName": "Applied Linear Algebra",
+                "CourseNumber": "344",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CoureName": "Linear Algebra",
+                "CourseNumber": "544",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq":[
+            {
+                "CoureName": "Applied Linear Algebra",
+                "CourseNumber": "344",
+                "CourseAcronym": "MATH"
+            },
+            {
+
+                "CoureName": "Linear Algebra",
+                "CourseNumber": "544",
+                "CourseAcronym": "MATH"
+            }
+        ]
+    },
+    {
+        "Couresid": "c9124c87-2363-41ee-aab4-38e7c745762d",
+        "CoureName": "Statistical Methods II",
+        "CourseAcronym": "STAT",
+        "CourseNumber": "516",
+        "CreditHours": 3,
+        "CourseMajors": ["Computer Information Systems"],
+        "fall": false,
+        "spring": false,
+        "PreReq": [
+            {
+                "CoureName": " Statistical Methods I ",
+                "CourseNumber": "515",
+                "CourseAcronym": "STAT"
+            },
+            {
+                "CoureName": "Statistics for Engineers",
+                "CourseNumber": "509",
+                "CourseAcronym": "STAT"
+            },
+            {
+                "CoureName": " Mathematical Statistics ",
+                "CourseNumber": "512",
+                "CourseAcronym": "STAT"
+            }
+        ]
+    }
 ]

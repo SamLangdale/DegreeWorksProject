@@ -28,9 +28,20 @@ public class facade extends uuid {
     }
 
     public void viewGrades() {
+<<<<<<< HEAD
     }
 
     public void selectStudent() {
     }
 
 }
+=======
+        
+    }
+
+    public void selectStudent() {
+
+    }
+
+}
+>>>>>>> efe6e25819d03e2203a4135a37910e4ef79b6286

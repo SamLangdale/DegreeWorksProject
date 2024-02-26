@@ -1,0 +1,33 @@
+[
+    {
+        
+        "UserType":"Advisor",
+        "UserName":"atlantablu",
+        "Password":"iadvisoryou",
+        "firstName":"atlanta",
+        "lastName":"blu",
+        "Email":"atlantablue@email.sc.edu",
+        "USCID":"t65774",
+        "Advsioruuid": "565966f8-2e40-4052-8636-c30a5591155d",
+        "AssignedStudents": [
+            {
+                "Studentid": "1b4cea67-9684-4fb4-a24d-ba81c820c59f"
+            }
+        ]
+    },
+    {
+        "UserType": "Advisor",
+        "UserName":"char23",
+        "Password": "iamchill",
+        "firstName":"charlotte",
+        "lastName":"nester",
+        "Email": "charloteenes@email.sc.edu",
+        "USCID":"c774512",
+        "Advsioruuid": "77e27445-c7c7-43c6-9a06-9580e94e7c28",
+        "AssignedStudents": [
+            {
+                "Studentid": "c75f7dd6-9ce5-4316-a123-976411453712"
+            }
+        ]
+    }
+]

@@ -2,10 +2,17 @@ import java.util.ArrayList;
 
 public class facade extends uuid {
 
+    private User users;
     private User currentUser;
+    UserType usertype;
+
+
+    public boolean createAccount(String userName, String password, UserType usertype) {
+        return users.addUser(userName, password, usertype);
+    }
 
     public User login(String userName, String password, UserType userType) {
-    
+        
     }
 
     public void createSchedule(ArrayList<Course> takenCourses, ArrayList<Course> currentCourses,
@@ -28,20 +35,9 @@ public class facade extends uuid {
     }
 
     public void viewGrades() {
-<<<<<<< HEAD
     }
 
     public void selectStudent() {
     }
 
 }
-=======
-        
-    }
-
-    public void selectStudent() {
-
-    }
-
-}
->>>>>>> efe6e25819d03e2203a4135a37910e4ef79b6286

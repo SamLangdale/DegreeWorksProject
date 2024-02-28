@@ -33,7 +33,7 @@ public class DataLoador extends DataConstants {
                     assignedStudentIds.add((String) student.get(ADVISOR_STUDENT_ID));
                 }
 
-                //advisors.add(new Advisor(id, userName, firstName, lastName, email, uscid, assignedStudentIds));
+                advisors.add(new Advisor(id, userName, firstName, lastName, email, uscid, assignedStudentIds));
             }
             return advisors;
         }
@@ -61,7 +61,7 @@ public class DataLoador extends DataConstants {
                 String uscid = (String) studentJSON.get(STUDENT_USCID);
                 JSONArray notes = (JSONArray) studentJSON.get(STUDENT_NOTES);
                 JSONArray warnings = (JSONArray) studentJSON.get(STUDENT_WARNINGS);
-                //students.add(new Student(id, userName, firstName, lastName, email, uscid));
+                students.add(new Student(id, userName, firstName, lastName, email, uscid));
             }
 
             return students;

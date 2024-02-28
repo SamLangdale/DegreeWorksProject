@@ -61,6 +61,8 @@ public class DataLoador extends DataConstants {
                 String uscid = (String) studentJSON.get(STUDENT_USCID);
                 JSONArray notes = (JSONArray) studentJSON.get(STUDENT_NOTES);
                 JSONArray warnings = (JSONArray) studentJSON.get(STUDENT_WARNINGS);
+                
+                
                 students.add(new Student(id, userName, firstName, lastName, email, uscid));
             }
 

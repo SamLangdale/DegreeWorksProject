@@ -1,5 +1,7 @@
+package BackEnd;
+import java.util.*;
 
-public class User {
+public abstract class User {
     protected String Password;
     protected String firstName;
     protected String lastName;
@@ -9,7 +11,7 @@ public class User {
     protected String UUID;
     
     public User(String firstName, String lastName, String userName,
-     String Email, String password, String USCID, String id) {
+     String Email, String password, String USCID, String UUID) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.Password = password;
@@ -17,6 +19,9 @@ public class User {
         this.Email = Email;
         this.USCID = USCID;
         this.UUID = UUID;
+     }
+     public User(String firstName, String lastName, String userName,
+     String Email, String password, String USCID) {
 
      }
 }

@@ -7,8 +7,8 @@ public class Course {
     protected int CredHours;
     protected boolean fall;
     protected boolean spring;
-    protected ArrayList<PreReqs> PreReq;
-    protected ArrayList<Course> Coreq;
+    protected ArrayList<PreReq> PreReq;
+    protected ArrayList<CoReq> Coreq;
     protected ArrayList<Grades> Grades;
     protected boolean honors;
     protected CreditType CreditType;
@@ -16,8 +16,8 @@ public class Course {
     protected String id;
     protected String courseAcronym; //
 
-    public course(String CourseName, int courseNum, int credHours,boolean fall, boolean spring,ArrayList<course> preReq, 
-     ArrayList<Coure> Coreq, boolean honors,CreditType CreditType, String id, String coureAcronym) {
+    public Course(String CourseName, int courseNum, int credHours, boolean fall, boolean spring,ArrayList<course> preReq, 
+     ArrayList<Coreq> Coreq, boolean honors,CreditType CreditType, String id, String coureAcronym) {
         this.CourseName = CourseName;
         this.CourseNum = CourseNum;
         this.CredHours = CredHours;

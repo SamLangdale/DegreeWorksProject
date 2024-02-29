@@ -1,12 +1,15 @@
-package BackEnd;
-import java.util.*;
+
+import java.util.ArrayList;
 public class UserList {
     private ArrayList<User> users;
-    private String JSONFile;
-    private UserList userlist;
+    //private String JSONFile;
+    private static UserList userlist;
+    //private ArrayList<Student> students;
     
     private UserList() {
-        //todo
+        userlist = DataLoador.getStudents();
+        userlist = DataLoader.getAdvisors();
+
     }
     public UserList getInstance() {
         if(this.userlist == null) {

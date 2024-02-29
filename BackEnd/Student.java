@@ -6,7 +6,7 @@ public class Student extends User{
     
     public Student(User user) {
         super(user.firstName, user.lastName, user.userName,
-         user.Email, user.Password, user.USCID, user.USCID);
+         user.Email, user.Password, user.USCID, user.UUID);
          note = new ArrayList<notes>();
     }
     

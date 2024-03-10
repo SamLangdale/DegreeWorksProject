@@ -1,17 +1,31 @@
 package BackEnd;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.UUID;
 
-public class Student extends User{
-    protected ArrayList<notes> note;
-    
-    public Student(User user) {
-        super(user.firstName, user.lastName, user.userName,
-         user.Email, user.Password, user.USCID, user.UUID);
-         note = new ArrayList<notes>();
+public class Student extends User {
+    private ArrayList<Note> notes;
+    private ArrayList<Warning> warnings;
+    private UUID studentProfileId;
+
+    public Student(UUID id, String userName, String firstName,String lastName, String email, String uscid,
+    ArrayList<Note> notes, ArrayList<Warning> warnings, UUID studentProfileId) {
+        super(id, userName, firstName, lastName, email, uscid);
+        this.notes = notes;
+        this.warnings = warnings;
+        this.studentProfileId = studentProfileId;
+    }
+    public ArrayList<Note> getNotes() {
+        return notes;
     }
 
-    public Student(java.util.UUID id, String userName, String firstName, String lastName, String email, String uscid) {
-        //TODO Auto-generated constructor stub
+    public ArrayList<Warning> getWarnings() {
+        return warnings;
+    }
+
+    public UUID getStudentProfileId() {
+        return studentProfileId;
     }
     
 }
+
+

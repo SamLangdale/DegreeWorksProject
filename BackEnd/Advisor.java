@@ -1,26 +1,22 @@
 package BackEnd; 
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.UUID;
 public class Advisor extends User {
-    protected ArrayList<Student> AssignedStudents;
-
-public Advisor(String firstName, String lastName, String userName, String email, String password, String uscid, UUID id ) {
-    super(firstName,lastName,userName, email,password, uscid, id);
-     AssignedStudents = new ArrayList<Student>();
-
-}
-// public Advisor(UUID id, String userName, String firstName, String lastName, String email, String uscid, ArrayList<String> assignedStudentIds) {
-//     super(firstName, lastName, userName, email, null, uscid, id);
-//     this.AssignedStudents = new ArrayList<>();
-//     // You might need to populate AssignedStudents based on assignedStudentIds here
-// }
-
-public Advisor(UUID id, String userName, String firstName, String lastName, String email, String uscid, ArrayList<String> assignedStudentIds) {
-    this.assignedStudentIds = assignedStudents;
-    super(userName, password, email, uscid, uuid);
-}
-
-// public boolean addNotes(Student student) {
+    private ArrayList<Student> assignedStudents;
+    public Advisor(UUID id, String userName, String firstName,String lastName, String email, String uscid, ArrayList<Student> assignedStudents) {
+        super(id,userName, firstName, lastName, email, uscid);
+        this.assignedStudents = assignedStudents;
+    }
+    public void addAssignedStudent(Student student) {
+        assignedStudents.add(student);
+    }
+    public void removeAssignedStudent(Student student) {
+        assignedStudents.remove(student);
+    }
+    public ArrayList<Student> getAssignedStudents() {
+        return assignedStudents;
+    }
+    // public boolean addNotes(Student student) {
 //     //todo   
 //     return //whatever
 // }
@@ -45,11 +41,5 @@ public Advisor(UUID id, String userName, String firstName, String lastName, Stri
 // public boolean viewWarnings(Student student) {
 //     //todo
 //     return //whatever
-// }
-
-
-
-
-
-    
+// } 
 }

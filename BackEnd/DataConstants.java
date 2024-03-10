@@ -1,5 +1,6 @@
+package BackEnd;
 public abstract class DataConstants {
-    protected static final String ADVISOR_FILE_NAME = "lib/advsior.json";
+    protected static final String ADVISOR_FILE_NAME = "Data/advsior.json";
     protected static final String ADVISOR_USERNAME = "UserName";
     protected static final String ADVISOR_USERTYPE = "Advisor";
     protected static final String ADVISOR_PASSWORD = "Password";
@@ -12,7 +13,7 @@ public abstract class DataConstants {
     protected static final String ADVISOR_STUDENT_ID = "Studentid";
 
     //Student 
-    protected static final String STUDENT_FILE_NAME = "lib/Student.json";
+    protected static final String STUDENT_FILE_NAME = "Data/Student.json";
     protected static final String STUDENT_USERTYPE = "Student";
     protected static final String STUDENT_USERNAME = "Username";
     protected static final String STUDENT_PASSWORD = "Password";

@@ -2,50 +2,57 @@ package BackEnd;
 
 import java.util.ArrayList;
 
-public class facade extends uuid {
+public class facade {
 
-    private User user;
+    private UserList userList;
     private User currentUser;
+  
 
-    public boolean createAccount(String userName, String password, String firstName, String lastName) {
-        return user.addUser(userName, password, firstName, lastName);
-    }
-
+   public facade() {
+    userList = UserList.getInstance();
+}
     public boolean login(String userName) {
-        if(!user.haveUser(userName))return false;
-		
-		currentUser = user.getUser(userName);
-		return true;
+        // to Check if the provided userName belongs to either a student or an advisor
+        Student student = userList.getStudent(userName);
+        Advisor advisor = userList.getAdvisor(userName);
+    
+        if (student != null || advisor != null) {
+            currentUser = (student != null) ? student : advisor;
+            return true;
+        } else {
+            return false; // No user found with the provided userName
+        }
     }
+     
 
     public User getCurrentUser() {
         return currentUser;
     }
 
-    public void createSchedule(ArrayList<Course> takenCourses, ArrayList<Course> currentCourses,
-                               ArrayList<Course> requiredCourses, ArrayList<PreReq> prereqs,
-                               Major major, ArrayList<Grade> grades) {
+    // public void createSchedule(ArrayList<Course> takenCourses, ArrayList<Course> currentCourses,
+    //                            ArrayList<Course> requiredCourses, ArrayList<PreReq> prereqs,
+    //                            Major major, ArrayList<Grade> grades) {
         
-    }
+    // }
 
-    public void logout() {
+    // public void logout() {
         
-    }
+    // }
 
-    public void selectMajor() {
+    // public void selectMajor() {
         
-    }
+    // }
 
-    public void viewMajorMap(Major major, ArrayList<CourseList> takenCourses,
-                             ArrayList<CurrentCourse> currentCourses,
-                             ArrayList<CourseList> requiredCourses, ArrayList<PreReq> preReqs) {
+    // public void viewMajorMap(Major major, ArrayList<CourseList> takenCourses,
+    //                          ArrayList<CurrentCourse> currentCourses,
+    //                          ArrayList<CourseList> requiredCourses, ArrayList<PreReq> preReqs) {
 
-    }
+    // }
 
-    public void viewGrades() {
-    }
+    // public void viewGrades() {
+    // }
 
-    public void selectStudent() {
-    }
+    // public void selectStudent() {
+    // }
 
 }

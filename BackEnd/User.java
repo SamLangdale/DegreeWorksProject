@@ -1,72 +1,67 @@
 package BackEnd;
-import java.util.*;
+import java.util.UUID;
 
-public class User {
-    protected String password;
-    protected String firstName;
-    protected String lastName;
-    protected String userName;
-    protected String email;
-    protected String uscid;
-    protected UUID id;
-    
-    // User that aready has a UUID
-    public User(String firstName, String lastName, String userName,
-     String Email, String password, String USCID, UUID id) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.password = password;
-        this.userName = userName;
-        this.email = Email;
-        this.uscid = USCID;
-        this.id = id;
-     }
-     // Brand new user without a UUID
-     public User(String firstName, String lastName, String userName,
-     String Email, String password, String USCID) {
-      this.firstName = firstName;
-        this.lastName = lastName;
-        this.password = password;
-        this.userName = userName;
-        this.email = Email;
-        this.uscid = USCID;
-        this.id = UUID.randomUUID();
-     }
-   public String getFirstName() {
-      return this.firstName;
+public abstract class User {
+   protected UUID id;
+   protected String userName;
+   protected String firstName;
+   protected String lastName;
+   protected String email;
+   protected String uscid;
 
-     }
-     public String getLastName() {
-      return this.lastName;
-     }
-     public String getPassword() {
-      return this.password;
-     }
-     public String getUsername() {
-      return this.userName;
-     }
-     public String getUSCID() {
-      return this.uscid;
-     }
-     public UUID getUUID() {
-      return this.id;
-     }
-     public void setFirstName(String FirstName) {
-      this.firstName = FirstName;
-     }
-     public void setLastName(String lastName) {
-      this.lastName = lastName;
-     }
-     public void setPassword(String Password) {
-      this.password = Password;
-     }
-     public void setUsername(String userName) {
+   public User(String userName, String firstName, String lastName, String email, String uscid) {
+      this.id = UUID.randomUUID();
       this.userName = userName;
-     }
-     public void setUSCID(String USCID) {
-      this.uscid = USCID;
-     }
-     public void setUUID(UUID UUID) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.email = email;
+      this.uscid = uscid;
+   }  
+   public User(UUID id, String userName, String firstName, String lastName, String email, String uscid) {
       this.id = id;
-     }
+      this.userName = userName;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.email = email;
+      this.uscid = uscid;
+   } 
+   public UUID getId() {
+      return id;
+   }
+   public String getUserName() {
+      return userName;
+  }
+
+  public String getFirstName() {
+      return firstName;
+  }
+
+  public void setFirstName(String firstName) {
+      this.firstName = firstName;
+  }
+
+  public String getLastName() {
+      return lastName;
+  }
+
+  public void setLastName(String lastName) {
+      this.lastName = lastName;
+  }
+
+  public String getEmail() {
+      return email;
+  }
+
+  public void setEmail(String email) {
+      this.email = email;
+  }
+
+  public String getUscid() {
+      return uscid;
+  }
+
+  public void setUscid(String uscid) {
+      this.uscid = uscid;
+  }
 }
+

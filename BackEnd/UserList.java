@@ -7,8 +7,9 @@ public class UserList {
     private ArrayList<Advisor> advisors;
 
     private UserList() {
-        students = DataLoader.getStudents();
-        advisors = DataLoader.getAdvisors();
+        students = new ArrayList<>();
+        advisors = new ArrayList<>();
+        loadData();
     }
 
     public static UserList getInstance() {
@@ -16,6 +17,11 @@ public class UserList {
             userList = new UserList();
         }
         return userList;
+    }
+
+    private void loadData() {
+        students.addAll(DataLoader.getStudents());
+        advisors.addAll(DataLoader.getAdvisors());
     }
 
     public boolean haveStudent(String userName) {
@@ -40,10 +46,10 @@ public class UserList {
         return students;
     }
 
-    public boolean addStudent(String userName, String firstName, String lastName, String email, String uscid) {
-        if (haveStudent(userName)) return false;
+    public boolean addStudent(Student student) {
+        if (haveStudent(student.getUserName())) return false;
 
-        students.add(new Student(userName, firstName, lastName, email, uscid));
+        students.add(student);
         return true;
     }
 
@@ -69,14 +75,17 @@ public class UserList {
         return advisors;
     }
 
-    public boolean addAdvisor(String userName, String firstName, String lastName, String email, String uscid) {
-        if (haveAdvisor(userName)) return false;
+    public boolean addAdvisor(Advisor advisor) {
+        if (haveAdvisor(advisor.getUserName())) return false;
 
-        advisors.add(new Advisor(userName, firstName, lastName, email, uscid));
+        advisors.add(advisor);
         return true;
     }
 
     public void saveUsers() {
-        DataWriter.saveUsers();
+        DataWriter.saveStudents();
+        DataWriter.saveAdvisors();
     }
 }
+
+

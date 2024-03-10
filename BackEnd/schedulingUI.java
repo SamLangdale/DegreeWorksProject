@@ -7,7 +7,6 @@ public class schedulingUI {
     private static final String WELCOME_MESSAGE = "Welcome to our Scheduling System";
     private static final String[] mainMenuOptions = {"Login", "Exit"};
     private Scanner scanner;
-
     private facade schedulerFacade; // Change facade to facade
 
 public schedulingUI() {

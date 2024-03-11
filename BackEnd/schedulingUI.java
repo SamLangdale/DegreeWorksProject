@@ -7,18 +7,18 @@ public class schedulingUI {
     private static final String WELCOME_MESSAGE = "Welcome to our Scheduling System";
     private static final String[] mainMenuOptions = {"Login", "Exit"};
     private Scanner scanner;
-    private facade schedulerFacade; // Change facade to facade
+    private facade schedulerFacade; 
 
 public schedulingUI() {
     scanner = new Scanner(System.in);
-    schedulerFacade = new facade(); // Change facade to facade
+    schedulerFacade = new facade(); 
 }
 
 
     public void run() {
         System.out.println(WELCOME_MESSAGE);
 
-        // Loop as long as we want to keep interacting with the scheduling system
+        // Loop's as long as we want to keep interacting with the scheduling system
         while (true) {
             displayMainMenu();
 
@@ -52,7 +52,7 @@ public schedulingUI() {
         System.out.println("\n");
     }
 
-    // Get the user's command number; if it's not valid, return -1
+    // Get's the user's command number; if it's not valid, return -1
     private int getUserCommand(int numCommands) {
         System.out.print("What would you like to do?: ");
 
@@ -73,9 +73,9 @@ public schedulingUI() {
         System.out.print("Enter your username: ");
         String username = scanner.nextLine();
     
-        if (schedulerFacade.login(username)) { // Change facade to schedulerFacade
+        if (schedulerFacade.login(username)) { 
             System.out.println("Login successful!");
-            // Here you can proceed with the user's interaction after login
+            
         } else {
             System.out.println("Login failed. Invalid username.");
         }

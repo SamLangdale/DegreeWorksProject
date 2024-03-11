@@ -28,4 +28,22 @@ public abstract class DataConstants {
     protected static final String STUDENT_NOTE_CONTENT = "content";
     protected static final String STUDENT_PROFILE_ID = "studentProfileid";
     protected static final String STUDENT_WARNINGS = "warnings";
+
+    //Courses
+    protected static final String COURSE_FILE_NAME = "Data/courses.json";
+    protected static final String COURESES_COURESID = "Couresid";
+    protected static final String COURESES_COURSENUMBER = "CourseNumber";
+    protected static final String COURESES_COURSEACRONYM = "CourseAcronym";
+    protected static final String COURESES_COURSENAME = "CourseName";
+    protected static final String COURESES_COURSEMAJORS = "CourseMajors";
+    protected static final String COURESES_CREDITHOURS = "CreditHours";
+    protected static final String COURESES_GRADES = "Grades";
+    protected static final String COURESES_FALL = "fall";
+    protected static final String COURESES_SPRING = "spring";
+    protected static final String COURESES_PREREQ = "PreReq";
+    protected static final String COURESES_COREQ = "CoReq";
+
+
+
+
 }

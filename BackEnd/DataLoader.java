@@ -152,7 +152,7 @@ public class DataLoader extends DataConstants {
                 }
 
                 JSONArray gradesArray = (JSONArray) courseObj.get("Grades");
-                ArrayList<String> grades = new ArrayList<>();
+                ArrayList<Grades> grades = new ArrayList<>();
                 for (Object gradeObj : gradesArray) {
                     grades.add((String) gradeObj);
                 }
@@ -165,8 +165,8 @@ public class DataLoader extends DataConstants {
                     String CourseNumber = (String) preReqJsonObj.get("CourseNumber");
                     String CourseAcronym = (String) preReqJsonObj.get("CourseAcronym");
 
-                    JSONArray preReqGradesArray = (JSONArray) preReqJsonObj.get("Grades");
-                    ArrayList<String> preReqGrades = new ArrayList<>();
+                    JSONArray GradesArray = (JSONArray) preReqJsonObj.get("Grades");
+                    ArrayList<Grades> preReqGrades = new ArrayList<>();
                     for (Object gradeObj : preReqGradesArray) {
                         preReqGrades.add((String) gradeObj);
                     }

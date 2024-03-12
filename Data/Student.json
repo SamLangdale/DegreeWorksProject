@@ -6,7 +6,7 @@
         "firstName":"yi",
         "lastName":"liu",
         "Email":"yiliu@email.sc.edu",
-        "USCID":"t666785",
+        "USCID":"t66678537",
         "Studentid": "1b4cea67-9684-4fb4-a24d-ba81c820c59f",
         "notes": [
             {
@@ -25,7 +25,7 @@
         "firstName":"Mark",
         "lastName": "King",
         "Email": "marki@email.sc.edu",
-        "USCID": "M457845",
+        "USCID": "M45784526",
         "Studentid": "c75f7dd6-9ce5-4316-a123-976411453712",
         "notes": [
             {
@@ -35,6 +35,25 @@
             }
         ],
         "studentProfileid": "24ac8867-619f-475e-b761-cfc349673632",
+        "warnings": ["Failing", "Risk_Of_Losing_Scholarship", "Risk_Of_Completely_Failing"]
+    },
+    {
+        "UserType":"Student",
+        "Username": "BW1234",
+        "Password": "Braxthedog12",
+        "firstName":"Brax",
+        "lastName": "West",
+        "Email": "bw2@email.sc.edu",
+        "USCID": "U87234782",
+        "Studentid": "ab4f7dd6-9ce5-4316-a123-976411453712",
+        "notes": [
+            {
+                "title": "Must take GFL",
+                "date": "02/24/24",
+                "content": ""
+            }
+        ],
+        "studentProfileid": "b37c8867-619f-475e-b761-cfc349673632",
         "warnings": ["Failing", "Risk_Of_Losing_Scholarship", "Risk_Of_Completely_Failing"]
     }
 ]

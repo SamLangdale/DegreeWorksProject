@@ -7,7 +7,7 @@
         "firstName":"atlanta",
         "lastName":"blu",
         "Email":"atlantablue@email.sc.edu",
-        "USCID":"t65774",
+        "USCID":"t6577483",
         "Advsioruuid": "565966f8-2e40-4052-8636-c30a5591155d",
         "AssignedStudents": [
             {
@@ -22,11 +22,26 @@
         "firstName":"charlotte",
         "lastName":"nester",
         "Email": "charloteenes@email.sc.edu",
-        "USCID":"c774512",
+        "USCID":"c77451247",
         "Advsioruuid": "77e27445-c7c7-43c6-9a06-9580e94e7c28",
         "AssignedStudents": [
             {
                 "Studentid": "c75f7dd6-9ce5-4316-a123-976411453712"
+            }
+        ]
+    },
+    {
+        "UserType": "Advisor",
+        "UserName":"Osoden99",
+        "Password": "MrOden567",
+        "firstName":"Osbert",
+        "lastName":"Odden",
+        "Email": "OsOd4@email.sc.edu",
+        "USCID":"c87451293",
+        "Advsioruuid": "89r27445-c7c7-43c6-9a06-9580e94e7c28",
+        "AssignedStudents": [
+            {
+                "Studentid": "a65f7dd6-9ce5-4316-a123-976411453712"
             }
         ]
     }

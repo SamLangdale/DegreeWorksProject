@@ -13,6 +13,7 @@ public class Course {
     protected ArrayList<PreReq> preReqs;
     protected ArrayList<CoReq> coReqs;
     protected ArrayList<Grades> grades;
+    protected ArrayList<RequirementType> requirementTypes;
 
     public Course(String courseName, String courseNumber, int creditHours, boolean fall, boolean spring,
                   String courseAcronym) {
@@ -26,6 +27,7 @@ public class Course {
         this.preReqs = new ArrayList<>();
         this.coReqs = new ArrayList<>();
         this.grades = new ArrayList<>();
+        this.requirementTypes = new ArrayList<>();
     }
 
     public Course(UUID id, String courseName, String courseNumber, int creditHours, boolean fall, boolean spring,
@@ -40,6 +42,8 @@ public class Course {
         this.preReqs = new ArrayList<>();
         this.coReqs = new ArrayList<>();
         this.grades = new ArrayList<>();
+        this.requirementTypes = new ArrayList<>();
+
     }
 
     public UUID getId() {

@@ -4,11 +4,50 @@
         "CourseNumber": "145",
         "CourseAcronym": "CSCE",
         "CourseName": "Algorithmic Design I",
-        "CourseMajors": ["Computer Science", "Computer Information Systems"],
+        "CourseMajors": ["Computer Science"],
         "CreditHours": 4,
         "Grades": ["A", "B", "C", "D", "F"],
         "fall": false,
         "spring": false,
+        "RequirementType": ["PR"],
+        "PreReq": [
+            {
+                "CourseName": "Basic College Mathematics",
+                "CourseNumber": "111",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            },
+            {
+                "CoureName": " Precalculus Mathematics",
+                "CourseNumber": "115",
+                "CourseAcronym": "MATH",
+                "Grades": ["A", "B", "C", "D", "F"]
+            }
+        ],
+        "CoReq": [
+            {
+                "CourseName": "Basic College Mathematics",
+                "CourseNumber": "111",
+                "CourseAcronym": "MATH"
+            },
+            {
+                "CourseName": " Precalculus Mathematics",
+                "CourseNumber": "115",
+                "CourseAcronym": "MATH"
+            }
+        ]
+    },
+    {
+        "Couresid": "de2bd333-178b-43bc-8709-b153df4527ce",
+        "CourseNumber": "145",
+        "CourseAcronym": "CSCE",
+        "CourseName": "Algorithmic Design I",
+        "CourseMajors": ["Computer Information Systems"],
+        "CreditHours": 4,
+        "Grades": ["A", "B", "C", "D", "F"],
+        "fall": false,
+        "spring": false,
+        "RequirementType": ["ARP"],
         "PreReq": [
             {
                 "CourseName": "Basic College Mathematics",
@@ -44,6 +83,7 @@
         "CourseMajors": ["Computer Science", "Computer Information Systems"],
         "CreditHours": 4,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType": ["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -100,6 +140,7 @@
         "CourseMajors": ["Computer Science", "Computer Information Systems"],
         "CreditHours": 1,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType": ["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -126,6 +167,7 @@
         "CourseMajors": ["Computer Science", "Computer Information Systems"],
         "CreditHours": 1,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType": ["PR"],
         "fall": false,
         "spring": false,
         "PreReq":[
@@ -146,6 +188,7 @@
         "CourseMajors": ["Computer Science"],
         "CreditHours": 3,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType": ["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -166,6 +209,7 @@
         "CourseMajors": ["Computer Science"],
         "CreditHours": 3,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType": ["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -192,6 +236,7 @@
         "CourseMajors": ["Computer Science", "Computer Information Systems"],
         "CreditHours": 3,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType": ["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -219,6 +264,7 @@
         "CourseMajors":["Computer Science"],
         "CreditHours": 3,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["MR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -251,6 +297,7 @@
         "CourseMajors": ["Computer Science", "Computer Information Systems"],
         "CreditHours": 3,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -271,6 +318,7 @@
         "CourseMajors":["Computer Science"],
         "CreditHours": 3,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType": ["MR"],
         "fall": true,
         "spring": false,
         "PreReq": [
@@ -309,6 +357,7 @@
         "CourseMajors": ["Computer Science", "Computer Information Systems"],
         "CreditHours": 3,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType": ["MR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -359,6 +408,7 @@
         "CourseMajors": ["Computer Science", "Computer Information Systems"],
         "CreditHours": 1,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["VSR"],
         "fall": false,
         "spring": false,
         "PreReq": [],
@@ -372,6 +422,7 @@
         "CourseMajors": ["Computer Science", "Computer Information Systems"],
         "CreditHours": 3,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -392,6 +443,7 @@
         "CourseMajors": ["Computer Science", "Computer Information Systems"],
         "CreditHours": 3,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["MR", "INT"],
         "fall": true,
         "spring": false,
         "PreReq": [
@@ -425,6 +477,7 @@
         "CourseMajors": ["Computer Science", "Computer Information Systems"],
         "CreditHours": 3,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["MR"],
         "fall": false,
         "spring": true,
         "PreReq": [
@@ -456,6 +509,7 @@
         "CourseMajors": ["Computer Information Systems"],
         "CourseAcronym":"CSCE",
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["MR"],
         "fall": false,
         "spring": false,
         "PreReq":[
@@ -478,6 +532,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["MR"],
         "PreReq": [
             {
                 "CourseName": "Computer Information Systems in Business",
@@ -523,6 +578,7 @@
         "fall": true,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "PreReq": [
             {
                 "CourseName": "Algorithm Design I",
@@ -555,6 +611,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "PreReq": [
             {
                 "CourseName": " Introduction to Computer Concepts",
@@ -603,6 +660,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["MR"],
         "PreReq": [
             {
                 "CourseName": "Advanced Programming Techniques",
@@ -629,6 +687,7 @@
         "fall": false,
         "spring": true,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["MR"],
         "PreReq": [],
         "CoReq": []
     },
@@ -642,6 +701,7 @@
         "fall": true,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["MR"],
         "PreReq": [
             {
                 "CourseName":" Algorithmic Design II",
@@ -674,6 +734,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["CMW"],
         "PreReq": [],
         "CoReq": []
     },
@@ -687,6 +748,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["ARP"],
         "PreReq": [
             {
                 "CourseName": "Trigonometry",
@@ -720,6 +782,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType": ["ARP"],
         "PreReq": [
             {
                 "CourseName": "Basic College Mathematics",
@@ -752,6 +815,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType": ["CMW","INF"], 
         "PreReq": [
             {
                 "CourseName": "Critical Reading and Composition",
@@ -772,6 +836,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["ARP"],
         "PreReq": [
             {
                 "CourseName": "Calculus I",
@@ -792,6 +857,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["SCI"],
         "PreReq": [
             {
                 "CourseName": "Basic College Mathematics",
@@ -836,6 +902,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["SCI"],
         "PreReq": [
             {
                 "CourseName": "Calculus I",
@@ -868,6 +935,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["SCI"],
         "PreReq": [
             {
                 "CourseName": "Basic College Mathematics",
@@ -907,6 +975,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["SCI"],
         "PreReq": [
             {
                 "CourseName": " Essentials of Physics I",
@@ -933,6 +1002,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "PreReq": [
             {
                 "CourseName":"Calculus II",
@@ -960,6 +1030,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["SCI"],
         "PreReq": [
             {
                 "CourseName": "General Chemistry I",
@@ -1016,6 +1087,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["SCI"],
         "PreReq": [
             {
                 "CourseName":" Essentials of Physics I",
@@ -1048,6 +1120,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["SCI"],
         "PreReq": [
             {
                 "CourseName": "General Chemistry I",
@@ -1092,6 +1165,7 @@
         "fall": false,
         "spring": false,
         "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["SCI"],
         "PreReq": [
             {
                 "CoureName": "Essentials of Physics II",
@@ -1115,6 +1189,8 @@
         "CourseNumber": "224",
         "CreditHours": 3,
         "CourseMajors": ["Computer Information Systems"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [],
@@ -1127,6 +1203,8 @@
         "CourseNumber": "241",
         "CreditHours": 3,
         "CourseMajors": ["Computer Science"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -1146,6 +1224,8 @@
         "CourseNumber": "174",
         "CreditHours": 3,
         "CourseMajors": ["Computer Information Systems"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -1166,6 +1246,8 @@
         "CourseNumber": "290",
         "CreditHours": 3,
         "CourseMajors": ["Computer Information Systems"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [],
@@ -1179,6 +1261,8 @@
         "CourseNumber": "462",
         "CreditHours": 3,
         "CourseMajors": ["Computer Science","Computer Information Systems"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -1204,6 +1288,8 @@
         "CourseNumber": "463",
         "CreditHours": 3,
         "CourseMajors": ["Computer Science","Computer Information Systems"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -1229,6 +1315,8 @@
         "CourseNumber": "222",
         "CreditHours": 3,
         "CourseMajors": ["Computer Information Systems"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -1254,6 +1342,8 @@
         "CourseNumber": "371",
         "CreditHours": 3,
         "CourseMajors": ["Computer Information Systems"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [],
@@ -1266,6 +1356,8 @@
         "CourseNumber": "515",
         "CreditHours": 3,
         "CourseMajors": ["Computer Information Systems"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -1315,6 +1407,8 @@
         "CreditHours": 3,
         "CourseNumber": "509",
         "CourseMajors": ["Computer Science","Computer Information Systems"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -1334,6 +1428,8 @@
         "CreditHours": 3,
         "CourseNumber": "355",
         "CourseMajors": ["Computer Science"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["MR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -1365,6 +1461,8 @@
         "CourseNumber": "344",
         "CreditHours": 3,
         "CourseMajors": ["Computer Science"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -1384,6 +1482,8 @@
         "CourseNumber": "344L",
         "CreditHours": 1,
         "CourseMajors": ["Computer Science"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
@@ -1421,23 +1521,28 @@
         "CourseNumber": "516",
         "CreditHours": 3,
         "CourseMajors": ["Computer Information Systems"],
+        "Grades": ["A", "B", "C", "D", "F"],
+        "RequirementType":["PR"],
         "fall": false,
         "spring": false,
         "PreReq": [
             {
                 "CoureName": " Statistical Methods I ",
                 "CourseNumber": "515",
-                "CourseAcronym": "STAT"
+                "CourseAcronym": "STAT",
+                "Grades": ["A", "B", "C", "D", "F"]
             },
             {
                 "CoureName": "Statistics for Engineers",
                 "CourseNumber": "509",
-                "CourseAcronym": "STAT"
+                "CourseAcronym": "STAT",
+                "Grades": ["A", "B", "C", "D", "F"]
             },
             {
                 "CoureName": " Mathematical Statistics ",
                 "CourseNumber": "512",
-                "CourseAcronym": "STAT"
+                "CourseAcronym": "STAT",
+                "Grades": ["A", "B", "C", "D", "F"]
             }
         ]
     }

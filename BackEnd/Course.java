@@ -43,7 +43,6 @@ public class Course {
         this.coReqs = new ArrayList<>();
         this.grades = new ArrayList<>();
         this.requirementTypes = new ArrayList<>();
-
     }
 
     public UUID getId() {
@@ -97,5 +96,14 @@ public class Course {
     public void setGrades(ArrayList<Grades> grades) {
         this.grades = grades;
     }
+
+    public ArrayList<RequirementType> getRequirementTypes() {
+        return requirementTypes;
+    }
+
+    public void setRequirementTypes(ArrayList<RequirementType> requirementTypes) {
+        this.requirementTypes = requirementTypes;
+    }
 }
+
 

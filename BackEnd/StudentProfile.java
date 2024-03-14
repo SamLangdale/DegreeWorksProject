@@ -21,4 +21,7 @@ public class StudentProfile {
         this.currentCourses = currentCourses;
         this.requiredCourses = requiredCourses;
     }
+
+    
+
 }

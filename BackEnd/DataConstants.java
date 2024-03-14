@@ -42,6 +42,7 @@ public abstract class DataConstants {
     protected static final String COURESES_SPRING = "spring";
     protected static final String COURESES_PREREQ = "PreReq";
     protected static final String COURESES_COREQ = "CoReq";
+    protected static final String COURESES_REQUIREMENTTYPE = "RequirementType";
 
 
 

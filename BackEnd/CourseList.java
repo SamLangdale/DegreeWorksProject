@@ -1,13 +1,14 @@
 package BackEnd;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class CourseList {
     private ArrayList<Course> coures;
     private static CourseList courseList;
 
     private CourseList() {
-        coures = new ArrayList<>();
+        coures = DataLoader.getCourses();
     }
 
     public static CourseList getInstance() {
@@ -20,5 +21,22 @@ public class CourseList {
     public void removeCourse(Course course) {
         coures.remove(course);
     }
+    
+    public ArrayList<Course> getCoures() {
+        return coures;
+    }
+
+    public Course getCourseById(UUID courseId) {
+        for(Course course : coures) {
+            if(course.getId().equals(courseId)) {
+                return course;
+            }
+
+        }
+        return null;
+    }
+    //public addCoure
+    //saveCoureses
+    
 
 }

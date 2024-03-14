@@ -126,6 +126,80 @@ public class DataLoader extends DataConstants {
         }
         return null; // Return's null if no student with the given ID is found
     }
+    // public static ArrayList<Course> getCourses() {
+    //     ArrayList<Course> courses = new ArrayList<>();
+
+    //     try {
+    //         FileReader reader = new FileReader(COURSE_FILE_NAME);
+    //         JSONParser parser = new JSONParser();
+    //         JSONArray courseArray = (JSONArray) parser.parse(reader);
+
+    //         for (Object obj : courseArray) {
+    //             JSONObject courseObj = (JSONObject) obj;
+
+    //             UUID id = UUID.fromString((String) courseObj.get("Couresid"));
+    //             String courseNumber = (String) courseObj.get("CourseNumber");
+    //             String courseAcronym = (String) courseObj.get("CourseAcronym");
+    //             String courseName = (String) courseObj.get("CourseName");
+    //             int creditHours = Integer.parseInt(courseObj.get("CreditHours").toString());
+    //             boolean fall = (boolean) courseObj.get("fall");
+    //             boolean spring = (boolean) courseObj.get("spring");
+
+    //             JSONArray majorsArray = (JSONArray) courseObj.get("CourseMajors");
+    //             ArrayList<String> courseMajors = new ArrayList<>();
+    //             for (Object majorObj : majorsArray) {
+    //                 courseMajors.add((String) majorObj);
+    //             }
+
+    //             JSONArray requirementTypeArray = () courseObj.get("RequirementType");
+    //             ArrayList<RequirementType> requirementType = new ArrayList<>();
+    //             for(Object requirementTypeObj : requirementTypeArray) {
+    //                 requirementType.add((String) requirementTypeObj);
+    //             }
+    //             JSONArray gradesArray = (JSONArray) courseObj.get("Grades");
+    //             ArrayList<Grades> grades = new ArrayList<>();
+    //             for (Object gradeObj : gradesArray) {
+    //                 grades.add((String) gradeObj);
+    //             }
+
+    //             JSONArray preReqArray = (JSONArray) courseObj.get("PreReq");
+    //             ArrayList<PreReq> preReqs = new ArrayList<>();
+    //             for (Object preReqObj : preReqArray) {
+    //                 JSONObject preReqJsonObj = (JSONObject) preReqObj;
+    //                 String CourseName = (String) preReqJsonObj.get("CourseName");
+    //                 String CourseNumber = (String) preReqJsonObj.get("CourseNumber");
+    //                 String CourseAcronym = (String) preReqJsonObj.get("CourseAcronym");
+
+    //                 JSONArray GradesArray = (JSONArray) preReqJsonObj.get("Grades");
+    //                 //ArrayList<Grades> grades = new ArrayList<>();
+    //                 for (Object gradeObj : GradesArray) {
+    //                     grades.add((String) gradeObj);
+    //                 }
+
+    //                 preReqs.add(new PreReq(CourseName, CourseNumber, CourseAcronym, grades));
+    //             }
+
+    //             JSONArray coReqArray = (JSONArray) courseObj.get("CoReq");
+    //             ArrayList<CoReq> coReqs = new ArrayList<>();
+    //             for (Object coReqObj : coReqArray) {
+    //                 JSONObject coReqJsonObj = (JSONObject) coReqObj;
+    //                 String CourseName = (String) coReqJsonObj.get("CourseName");
+    //                 String CourseNumber = (String) coReqJsonObj.get("CourseNumber");
+    //                 String CourseAcronym = (String) coReqJsonObj.get("CourseAcronym");
+
+    //                 coReqs.add(new CoReq(CourseName, CourseNumber, CourseAcronym));
+    //             }
+
+    //             Course course = new Course(id, courseNumber, courseAcronym, courseName, courseMajors, creditHours, grades, fall, spring, preReqs, coReqs);
+    //             courses.add(course);
+    //         }
+    //     } catch (Exception e) {
+    //         e.printStackTrace();
+    //     }
+
+    //     return courses;
+    // }
+
     public static ArrayList<Course> getCourses() {
         ArrayList<Course> courses = new ArrayList<>();
 
@@ -142,20 +216,8 @@ public class DataLoader extends DataConstants {
                 String courseAcronym = (String) courseObj.get("CourseAcronym");
                 String courseName = (String) courseObj.get("CourseName");
                 int creditHours = Integer.parseInt(courseObj.get("CreditHours").toString());
-                boolean isFall = (boolean) courseObj.get("fall");
-                boolean isSpring = (boolean) courseObj.get("spring");
-
-                JSONArray majorsArray = (JSONArray) courseObj.get("CourseMajors");
-                ArrayList<String> courseMajors = new ArrayList<>();
-                for (Object majorObj : majorsArray) {
-                    courseMajors.add((String) majorObj);
-                }
-
-                JSONArray gradesArray = (JSONArray) courseObj.get("Grades");
-                ArrayList<Grades> grades = new ArrayList<>();
-                for (Object gradeObj : gradesArray) {
-                    grades.add((String) gradeObj);
-                }
+                boolean fall = (boolean) courseObj.get("fall");
+                boolean spring = (boolean) courseObj.get("spring");
 
                 JSONArray preReqArray = (JSONArray) courseObj.get("PreReq");
                 ArrayList<PreReq> preReqs = new ArrayList<>();
@@ -164,14 +226,13 @@ public class DataLoader extends DataConstants {
                     String CourseName = (String) preReqJsonObj.get("CourseName");
                     String CourseNumber = (String) preReqJsonObj.get("CourseNumber");
                     String CourseAcronym = (String) preReqJsonObj.get("CourseAcronym");
-
-                    JSONArray GradesArray = (JSONArray) preReqJsonObj.get("Grades");
-                    ArrayList<Grades> preReqGrades = new ArrayList<>();
-                    for (Object gradeObj : preReqGradesArray) {
-                        preReqGrades.add((String) gradeObj);
+                    JSONArray gradesArray = (JSONArray) preReqJsonObj.get("Grades");
+                    ArrayList<Grades> grades = new ArrayList<>();
+                    for (Object gradeObj : gradesArray) {
+                        String gradeStr = (String) gradeObj;
+                        grades.add(Grades.valueOf(gradeStr));
                     }
-
-                    preReqs.add(new PreReq(CourseName, CourseNumber, CourseAcronym, preReqGrades));
+                    preReqs.add(new PreReq(CourseName, CourseNumber, CourseAcronym, grades));
                 }
 
                 JSONArray coReqArray = (JSONArray) courseObj.get("CoReq");
@@ -181,11 +242,29 @@ public class DataLoader extends DataConstants {
                     String CourseName = (String) coReqJsonObj.get("CourseName");
                     String CourseNumber = (String) coReqJsonObj.get("CourseNumber");
                     String CourseAcronym = (String) coReqJsonObj.get("CourseAcronym");
-
                     coReqs.add(new CoReq(CourseName, CourseNumber, CourseAcronym));
                 }
 
-                Course course = new Course(id, courseNumber, courseAcronym, courseName, courseMajors, creditHours, grades, isFall, isSpring, preReqs, coReqs);
+                JSONArray gradesArray = (JSONArray) courseObj.get("Grades");
+                ArrayList<Grades> grades = new ArrayList<>();
+                for (Object gradeObj : gradesArray) {
+                    String gradeStr = (String) gradeObj;
+                    grades.add(Grades.valueOf(gradeStr));
+                }
+
+                JSONArray reqTypeArray = (JSONArray) courseObj.get("RequirementType");
+                ArrayList<RequirementType> reqTypes = new ArrayList<>();
+                for (Object reqTypeObj : reqTypeArray) {
+                    String reqTypeStr = (String) reqTypeObj;
+                    reqTypes.add(RequirementType.valueOf(reqTypeStr));
+                }
+
+                Course course = new Course(id, courseName, courseNumber, creditHours, fall, spring, courseAcronym);
+                course.setPreReqs(preReqs);
+                course.setCoReqs(coReqs);
+                course.setGrades(grades);
+                course.setRequirementTypes(reqTypes);
+
                 courses.add(course);
             }
         } catch (Exception e) {
@@ -194,6 +273,11 @@ public class DataLoader extends DataConstants {
 
         return courses;
     }
+
+    //getStuduentProfile
+    //getMajors
+    
+
     
 
 }

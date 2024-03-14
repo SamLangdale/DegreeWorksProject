@@ -23,4 +23,7 @@ public class StudentProfile {
         this.requiredCourses = requiredCourses;
         this.ExpectedGradYear = ExpectedGradYear;
     }
+
+    
+
 }

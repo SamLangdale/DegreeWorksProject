@@ -88,6 +88,14 @@ public class DataWriter extends DataConstants {
         
         return advisorDetails;
     }
+
+    public static void saveCourses() {
+        
+    }
+    
+    public static JSONObject getCoursesJSON(Course coures) {
+        
+    }
     
 }
 

@@ -6,6 +6,8 @@ public class facade {
 
     private UserList userList;
     private User currentUser;
+    private ArrayList <UserType> userType;
+    
   
 
    public facade() {
@@ -28,8 +30,18 @@ public class facade {
     public User getCurrentUser() {
         return currentUser;
     }
+    public boolean signUp(String firstName, String lastName, String email, String uscid, ArrayList <UserType> userType) {
 
-    // public void createSchedule(ArrayList<Course> takenCourses, ArrayList<Course> currentCourses,
+        
+
+    }
+}
+
+
+
+  
+
+ // public void createSchedule(ArrayList<Course> takenCourses, ArrayList<Course> currentCourses,
     //                            ArrayList<Course> requiredCourses, ArrayList<PreReq> prereqs,
     //                            Major major, ArrayList<Grade> grades) {
         
@@ -54,5 +66,3 @@ public class facade {
 
     // public void selectStudent() {
     // }
-
-}

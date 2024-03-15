@@ -29,20 +29,5 @@
                 "Studentid": "c75f7dd6-9ce5-4316-a123-976411453712"
             }
         ]
-    },
-    {
-        "UserType": "Advisor",
-        "UserName":"Osoden99",
-        "Password": "MrOden567",
-        "firstName":"Osbert",
-        "lastName":"Odden",
-        "Email": "OsOd4@email.sc.edu",
-        "USCID":"c87451293",
-        "Advsioruuid": "89r27445-c7c7-43c6-9a06-9580e94e7c28",
-        "AssignedStudents": [
-            {
-                "Studentid": "a65f7dd6-9ce5-4316-a123-976411453712"
-            }
-        ]
     }
 ]

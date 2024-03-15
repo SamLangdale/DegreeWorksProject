@@ -2,6 +2,8 @@ package BackEnd;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.UUID;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -89,13 +91,109 @@ public class DataWriter extends DataConstants {
         return advisorDetails;
     }
 
+
+
     public static void saveCourses() {
+        CourseList courseList = CourseList.getInstance();
+        ArrayList<Course> courses = courseList.getCoures();
+        JSONArray jsonCourses = new JSONArray();
+
+        for (Course course : courses) {
+            jsonCourses.add(getCoursesJSON(course));
+        }
+
+        try (FileWriter file = new FileWriter(COURSE_FILE_NAME)) {
+            file.write(jsonCourses.toJSONString());
+            file.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static JSONObject getCoursesJSON(Course course) {
+        JSONObject courseDetails = new JSONObject();
+        courseDetails.put(COURESES_COURESID, course.getId().toString());
+        courseDetails.put(COURESES_COURSENUMBER, course.getCourseNumber());
+        courseDetails.put(COURESES_COURSENAME, course.getCourseName());
+        courseDetails.put(COURESES_CREDITHOURS, course.getCreditHours());
+        courseDetails.put(COURESES_FALL, course.isFall());
+        courseDetails.put(COURESES_SPRING, course.isSpring());
+        courseDetails.put(COURESES_COURSEACRONYM, course.getCourseAcronym());
+
+        JSONArray preReqArray = new JSONArray();
+        for (PreReq preReq : course.getPreReqs()) {
+            JSONObject preReqObj = new JSONObject();
+            preReqObj.put(COURESES_COURSENAME, preReq.getCourseName());
+            preReqObj.put(COURESES_COURSENUMBER, preReq.getCourseNumber());
+            preReqObj.put(COURESES_COURSEACRONYM, preReq.getCourseAcronym());
+
+            JSONArray gradesArray = new JSONArray();
+            for (Grades grade : preReq.getGrades()) {
+                gradesArray.add(grade.toString());
+            }
+            preReqObj.put(COURESES_GRADES, gradesArray);
+
+            preReqArray.add(preReqObj);
+        }
+        courseDetails.put(COURESES_PREREQ, preReqArray);
+
+        JSONArray coReqArray = new JSONArray();
+        for (CoReq coReq : course.getCoReqs()) {
+            JSONObject coReqObj = new JSONObject();
+            coReqObj.put(COURESES_COURSENAME, coReq.getCourseName());
+            coReqObj.put(COURESES_COURSENUMBER, coReq.getCourseNumber());
+            coReqObj.put(COURESES_COURSEACRONYM, coReq.getCourseAcronym());
+            coReqArray.add(coReqObj);
+        }
+        courseDetails.put(COURESES_COREQ, coReqArray);
+
+        JSONArray gradesArray = new JSONArray();
+        for (Grades grade : course.getGrades()) {
+            gradesArray.add(grade.toString());
+        }
+        courseDetails.put(COURESES_GRADES, gradesArray);
+
+        JSONArray reqTypeArray = new JSONArray();
+        for (RequirementType reqType : course.getRequirementTypes()) {
+            reqTypeArray.add(reqType.toString());
+        }
+        courseDetails.put(COURESES_REQUIREMENTTYPE, reqTypeArray);
+
+        return courseDetails;
+    }
+       public static void saveMajors() {
+        MajorList majorList = MajorList.getInstance();
+        ArrayList<Major> majors = majorList.getMajors();
+        JSONArray jsonMajors = new JSONArray();
         
+        for (Major major : majors) {
+            jsonMajors.add(getMajorJSON(major));
+        }
+        
+        try (FileWriter file = new FileWriter(MAJOR_FILE_NAME)) {
+            file.write(jsonMajors.toJSONString());
+            file.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
-    public static JSONObject getCoursesJSON(Course coures) {
+    public static JSONObject getMajorJSON(Major major) {
+        JSONObject majorDetails = new JSONObject();
+        majorDetails.put("Name", major.getName());
+        majorDetails.put("Majorid", major.getMajorId().toString());
         
+        JSONArray coursesArray = new JSONArray();
+        for (UUID courseId : major.getCourses()) {
+            coursesArray.add(courseId.toString());
+        }
+        majorDetails.put("Courses", coursesArray);
+        
+        return majorDetails;
     }
+
+
+    
     
 }
 

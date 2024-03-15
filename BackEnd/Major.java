@@ -1,19 +1,41 @@
 package BackEnd;
 import java.util.*;
 
-import javax.sound.sampled.UnsupportedAudioFileException;
+
 
 public class Major {
     private String name;
-    private ArrayList<Course> requirements;
-    private UUID UUID;
-    private String JsonFile;
+    private ArrayList<UUID> courses;
+    private UUID MajorId;
+    
 
-    public Major(String name, ArrayList<Course> requirements, UUID UUID, String JsonFile) {
+    public Major(String name, UUID MajorId, ArrayList<UUID> courses) {
         this.name = name;
-        this.requirements = requirements;
-        this.UUID = UUID;
-        this.JsonFile = JsonFile;
+        this.courses = courses;
+        this.MajorId = MajorId;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<UUID> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(ArrayList<UUID> courses) {
+        this.courses = courses;
+    }
+
+    public UUID getMajorId() {
+        return MajorId;
+    }
+
+    public void setMajorId(UUID majorId) {
+        this.MajorId = majorId;
     }
     
 }

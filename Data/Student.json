@@ -1,24 +1,5 @@
 [
     {
-        "UserType": "Student",
-        "Username": "ypl15",
-        "Password":"gococks123",
-        "firstName":"yi",
-        "lastName":"liu",
-        "Email":"yiliu@email.sc.edu",
-        "USCID":"t66678537",
-        "Studentid": "1b4cea67-9684-4fb4-a24d-ba81c820c59f",
-        "notes": [
-            {
-                "title": "Close to losing scholarship",
-                "date": "12/12/23",
-                "content": "Liu you're close to losing your Life scholarship"
-            }
-        ],
-        "studentProfileid": "24ac8867-619f-475e-b761-cfc349673632",
-        "warnings": ["Failing", "Risk_Of_Losing_Scholarship", "Risk_Of_Completely_Failing"]
-    },
-    {
         "UserType":"Student",
         "Username": "mrk12",
         "Password": "ylep115",
@@ -34,7 +15,7 @@
                 "content": ""
             }
         ],
-        "studentProfileid": "24ac8867-619f-475e-b761-cfc349673632",
+        "studentprofileid": "5aa78c91-019d-40cc-9cfd-c075127ab1da",
         "warnings": ["Failing", "Risk_Of_Losing_Scholarship", "Risk_Of_Completely_Failing"]
     },
     {
@@ -53,7 +34,7 @@
                 "content": ""
             }
         ],
-        "studentProfileid": "b37c8867-619f-475e-b761-cfc349673632",
+        "studentprofileid": "24ac8867-619f-475e-b761-cfc349673632",
         "warnings": ["Failing", "Risk_Of_Losing_Scholarship", "Risk_Of_Completely_Failing"]
     }
 ]

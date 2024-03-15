@@ -2,22 +2,34 @@ package BackEnd;
 import java.util.*;
 
 public class MajorList {
-    private ArrayList<Major> Majors;
-    private MajorList instance;
+    private ArrayList<Major> majors;
+    private static  MajorList majorList;
 
-    MajorList() {
-        // todo
+    private MajorList() {
+        majors = DataLoader.getMajors();
     }
-    public MajorList getInstance() {return this.instance;}
-    public boolean addMajor(String name, ArrayList<Course> requiments) {
-        //todo
-        return // bool
+    public static MajorList getInstance() {
+        if(majorList == null) {
+            majorList = new MajorList();
+        }
+        return majorList;
     }
-    public Major GetMajor(UUID UUID) { 
-        return //major
-    }
-
-
-
     
+    public boolean addMajor(String name, ArrayList<UUID> courses) {
+        UUID majorId = UUID.randomUUID();
+        Major major = new Major(name, majorId, courses);
+        return majors.add(major);
+    }
+
+    public Major getMajor(UUID majorId) {
+        for (Major major : majors) {
+            if (major.getMajorId().equals(majorId)) {
+                return major;
+            }
+        }
+        return null;
+    }
+    public ArrayList<Major> getMajors() {
+        return majors;
+    }
 }

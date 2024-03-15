@@ -12,6 +12,7 @@ public class StudentProfile {
     private ArrayList<UUID> currentCourses;
     private ArrayList<UUID> requiredCourses;
     private int ExpectedGradYear;
+    private String currentStudentYear;
     public StudentProfile(UUID studentProfileId, UUID majorId, String minor, double GPA,
     ArrayList<UUID> takenCourses, ArrayList<UUID> currentCourses, ArrayList<UUID> requiredCourses, int ExpectedGradYear) {
         this.studentProfileId = studentProfileId;
@@ -22,6 +23,7 @@ public class StudentProfile {
         this.currentCourses = currentCourses;
         this.requiredCourses = requiredCourses;
         this.ExpectedGradYear = ExpectedGradYear;
+        this.currentStudentYear = currentStudentYear;
     }
 
     

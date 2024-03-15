@@ -44,7 +44,23 @@ public abstract class DataConstants {
     protected static final String COURESES_COREQ = "CoReq";
     protected static final String COURESES_REQUIREMENTTYPE = "RequirementType";
 
-
-
+    //Majors
+    protected static final String MAJOR_FILE_NAME = "Data/Majors.json";
+    protected static final String MAJORS_NAME = "Name";
+    protected static final String MAJORS_MAJORID = "Majorid";
+    protected static final String MAJORS_COURSES = "courses";
+    
+    //StudentProfile
+    protected static final String STUDENTPROFILE_FILE_NAME = "Data/StudentProfile.json";
+    protected static final String STUDENTPROFILE_ID = "studentprofileid";
+    protected static final String STUDENTPROFILE_MAJOR_ID = "Majorid";
+    protected static final String STUDENTPROFILE_MINOR = "minor";
+    protected static final String STUDENTPROFILE_GPA = "GPA";
+    protected static final String STUDENTPROFILE_TAKENCOURES = "takenCoures";
+    protected static final String STUDENTPROFILE_CURRENTCOURES = "CurrentCoures";
+    protected static final String STUDENTPROFILE_REQUIREDCOURES = "RequiredCoures";
+    protected static final String STUDENTPROFILE_EXPECTEDGRADYEAR = "ExpectedGradYear";
+    protected static final String STUDENTPROFILE_CURRENTSTUDENTYEAR = "currentStudentYear";
+ 
 
 }

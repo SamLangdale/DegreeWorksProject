@@ -68,7 +68,10 @@ public class DataWriter extends DataConstants {
         }
         studentDetails.put(STUDENT_WARNINGS, warningsArray);
         
-        studentDetails.put(STUDENT_PROFILE_ID, student.getStudentProfileId().toString());
+        //studentDetails.put(STUDENT_PROFILE_ID, student.getStudentProfileId().toString());
+        UUID studentProfileId = student.getStudentProfileId();
+        String studentProfileIdString = (studentProfileId != null) ? studentProfileId.toString() : "";
+        studentDetails.put(STUDENT_PROFILE_ID, studentProfileIdString);
         
         return studentDetails;
     }
@@ -81,6 +84,7 @@ public class DataWriter extends DataConstants {
         advisorDetails.put(ADVISOR_LAST_NAME, advisor.getLastName());
         advisorDetails.put(ADVISOR_EMAIL, advisor.getEmail());
         advisorDetails.put(ADVISOR_USCID, advisor.getUscid());
+        advisorDetails.put(ADVISOR_PASSWORD, advisor.getPassword());
         
         JSONArray assignedStudentsArray = new JSONArray();
         for (Student student : advisor.getAssignedStudents()) {
@@ -112,52 +116,52 @@ public class DataWriter extends DataConstants {
 
     public static JSONObject getCoursesJSON(Course course) {
         JSONObject courseDetails = new JSONObject();
-        courseDetails.put(COURESES_COURESID, course.getId().toString());
-        courseDetails.put(COURESES_COURSENUMBER, course.getCourseNumber());
-        courseDetails.put(COURESES_COURSENAME, course.getCourseName());
-        courseDetails.put(COURESES_CREDITHOURS, course.getCreditHours());
-        courseDetails.put(COURESES_FALL, course.isFall());
-        courseDetails.put(COURESES_SPRING, course.isSpring());
-        courseDetails.put(COURESES_COURSEACRONYM, course.getCourseAcronym());
+        courseDetails.put(COURSE_ID, course.getId().toString());
+        courseDetails.put(COURSE_NUMBER, course.getCourseNumber());
+        courseDetails.put(COURSE_NAME, course.getCourseName());
+        courseDetails.put(COURSE_CREDIT_HOURS, course.getCreditHours());
+        courseDetails.put(COURSE_FALL, course.isFall());
+        courseDetails.put(COURSE_SPRING, course.isSpring());
+        courseDetails.put(COURSE_ACRONYM, course.getCourseAcronym());
 
         JSONArray preReqArray = new JSONArray();
         for (PreReq preReq : course.getPreReqs()) {
             JSONObject preReqObj = new JSONObject();
-            preReqObj.put(COURESES_COURSENAME, preReq.getCourseName());
-            preReqObj.put(COURESES_COURSENUMBER, preReq.getCourseNumber());
-            preReqObj.put(COURESES_COURSEACRONYM, preReq.getCourseAcronym());
+            preReqObj.put(COURSE_NAME, preReq.getCourseName());
+            preReqObj.put(COURSE_NUMBER, preReq.getCourseNumber());
+            preReqObj.put(COURSE_ACRONYM, preReq.getCourseAcronym());
 
             JSONArray gradesArray = new JSONArray();
             for (Grades grade : preReq.getGrades()) {
                 gradesArray.add(grade.toString());
             }
-            preReqObj.put(COURESES_GRADES, gradesArray);
+            preReqObj.put(COURSE_GRADES, gradesArray);
 
             preReqArray.add(preReqObj);
         }
-        courseDetails.put(COURESES_PREREQ, preReqArray);
+        courseDetails.put(COURSE_PREREQUISITES, preReqArray);
 
         JSONArray coReqArray = new JSONArray();
         for (CoReq coReq : course.getCoReqs()) {
             JSONObject coReqObj = new JSONObject();
-            coReqObj.put(COURESES_COURSENAME, coReq.getCourseName());
-            coReqObj.put(COURESES_COURSENUMBER, coReq.getCourseNumber());
-            coReqObj.put(COURESES_COURSEACRONYM, coReq.getCourseAcronym());
+            coReqObj.put(COURSE_NAME, coReq.getCourseName());
+            coReqObj.put(COURSE_NUMBER, coReq.getCourseNumber());
+            coReqObj.put(COURSE_ACRONYM, coReq.getCourseAcronym());
             coReqArray.add(coReqObj);
         }
-        courseDetails.put(COURESES_COREQ, coReqArray);
+        courseDetails.put(COURSE_COREQUISITES, coReqArray);
 
         JSONArray gradesArray = new JSONArray();
         for (Grades grade : course.getGrades()) {
             gradesArray.add(grade.toString());
         }
-        courseDetails.put(COURESES_GRADES, gradesArray);
+        courseDetails.put(COURSE_GRADES, gradesArray);
 
         JSONArray reqTypeArray = new JSONArray();
         for (RequirementType reqType : course.getRequirementTypes()) {
             reqTypeArray.add(reqType.toString());
         }
-        courseDetails.put(COURESES_REQUIREMENTTYPE, reqTypeArray);
+        courseDetails.put(COURSE_REQUIREMENT_TYPE, reqTypeArray);
 
         return courseDetails;
     }
@@ -191,9 +195,5 @@ public class DataWriter extends DataConstants {
         
         return majorDetails;
     }
-
-
-    
-    
 }
 

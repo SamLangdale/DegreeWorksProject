@@ -8,22 +8,25 @@ public abstract class User {
    protected String lastName;
    protected String email;
    protected String uscid;
+   protected String password; 
 
-   public User(String userName, String firstName, String lastName, String email, String uscid) {
+   public User(String userName, String firstName, String lastName, String email, String uscid, String password) {
       this.id = UUID.randomUUID();
       this.userName = userName;
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
       this.uscid = uscid;
+      this.password = password; 
    }  
-   public User(UUID id, String userName, String firstName, String lastName, String email, String uscid) {
+   public User(UUID id, String userName, String firstName, String lastName, String email, String uscid, String password) {
       this.id = id;
       this.userName = userName;
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
       this.uscid = uscid;
+      this.password = password; 
    } 
    public UUID getId() {
       return id;
@@ -63,5 +66,13 @@ public abstract class User {
   public void setUscid(String uscid) {
       this.uscid = uscid;
   }
+  public String getPassword() {
+      return password;
+  }
+
+  public void setPassword(String password) {
+      this.password = password;
+  }
 }
+
 

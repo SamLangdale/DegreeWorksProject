@@ -86,6 +86,25 @@ public class UserList {
         DataWriter.saveStudents();
         DataWriter.saveAdvisors();
     }
+    public User getUserByUsernameAndPassword(String userName, String password) {
+        // Check among students
+        for (Student student : students) {
+            if (student.getUserName().equals(userName) && student.getPassword().equals(password)) {
+                return student;
+            }
+        }
+    
+        // Check among advisors
+        for (Advisor advisor : advisors) {
+            if (advisor.getUserName().equals(userName) && advisor.getPassword().equals(password)) {
+                return advisor;
+            }
+        }
+    
+        // No user found with the provided credentials
+        return null;
+    }
+    
 }
 
 

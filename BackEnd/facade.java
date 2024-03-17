@@ -1,41 +1,56 @@
 package BackEnd;
-
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class facade {
-
     private UserList userList;
     private User currentUser;
-    private ArrayList <UserType> userType;
-    
-  
 
-   public facade() {
-    userList = UserList.getInstance();
-}
-    public boolean login(String userName) {
-        // to Check if the provided userName belongs to either a student or an advisor
-        Student student = userList.getStudent(userName);
-        Advisor advisor = userList.getAdvisor(userName);
-    
-        if (student != null || advisor != null) {
-            currentUser = (student != null) ? student : advisor;
+    public facade() {
+        userList = UserList.getInstance();
+    }
+
+    public boolean login(String userName, String password) {
+        // Check if the provided userName and password match with any user in the system
+        User user = userList.getUserByUsernameAndPassword(userName, password);
+
+        if (user != null) {
+            currentUser = user;
             return true;
         } else {
-            return false; // No user found with the provided userName
+            return false; // No user found with the provided credentials
         }
     }
-     
 
     public User getCurrentUser() {
         return currentUser;
     }
-    public boolean signUp(String firstName, String lastName, String email, String uscid, ArrayList <UserType> userType) {
 
-        
-
+    public boolean createAccount(String userName, String firstName, String lastName, String email, String uscid, UserType userType, String password) {
+        // Check if the provided user type is valid
+        if (userType == UserType.STUDENT || userType == UserType.ADVISOR) {
+            // Create a new user object based on the userType
+            User newUser;
+            if (userType == UserType.STUDENT) {
+                newUser = new Student(UUID.randomUUID(), userName, firstName, lastName, email, uscid, new ArrayList<>(), new ArrayList<>(), UUID.randomUUID(), password);
+                userList.addStudent((Student) newUser);
+                DataWriter.saveStudents(); // Save to student JSON file
+            } else {
+                newUser = new Advisor(UUID.randomUUID(), userName, firstName, lastName, email, uscid, new ArrayList<>(), password);
+                userList.addAdvisor((Advisor) newUser);
+                DataWriter.saveAdvisors(); // Save to advisor JSON file
+            }
+            currentUser = newUser;
+            return true;
+        } else {
+            // Invalid user type provided
+            return false;
+        }
     }
 }
+
+
+
 
 
 

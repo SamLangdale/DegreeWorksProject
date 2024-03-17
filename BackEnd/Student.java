@@ -7,13 +7,14 @@ public class Student extends User {
     private ArrayList<Warning> warnings;
     private UUID studentProfileId;
 
-    public Student(UUID id, String userName, String firstName,String lastName, String email, String uscid,
-    ArrayList<Note> notes, ArrayList<Warning> warnings, UUID studentProfileId) {
-        super(id, userName, firstName, lastName, email, uscid);
+    public Student(UUID id, String userName, String firstName, String lastName, String email, String uscid,
+                   ArrayList<Note> notes, ArrayList<Warning> warnings, UUID studentProfileId, String password) {
+        super(id, userName, firstName, lastName, email, uscid, password);
         this.notes = notes;
         this.warnings = warnings;
         this.studentProfileId = studentProfileId;
     }
+
     public ArrayList<Note> getNotes() {
         return notes;
     }
@@ -25,7 +26,7 @@ public class Student extends User {
     public UUID getStudentProfileId() {
         return studentProfileId;
     }
-    
 }
+
 
 

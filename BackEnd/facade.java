@@ -55,6 +55,7 @@ public class facade {
         }
     }
     public void logout() {
+        currentUser = null;
         userList.saveUsers();
     }
        public void viewCoursesTaken() {

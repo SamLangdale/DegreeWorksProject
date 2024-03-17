@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class schedulingUI {
     private static final String WELCOME_MESSAGE = "Welcome to our Scheduling System";
-    private static final String[] mainMenuOptions = {"Login", "Create Account", "Exit"};
+    private static final String[] mainMenuOptions = {"Login", "Create Account", "Logout", "Exit"};
     private Scanner scanner;
     private facade schedulerFacade; 
 
@@ -19,27 +19,29 @@ public class schedulingUI {
         // Loop's as long as we want to keep interacting with the scheduling system
         while (true) {
             displayMainMenu();
-
             int userCommand = getUserCommand(mainMenuOptions.length);
 
             if (userCommand == -1) {
                 System.out.println("Not a valid command");
                 continue;
             }
-
+        
             // If the user chooses the exit option, break out of the loop and end the program
             if (userCommand == mainMenuOptions.length - 1) {
                 System.out.println("Goodbye!");
                 break;
             }
-
-            // For now, we only implement login and create account functionality
+        
+            // For now, we only implement login, create account, and logout functionality
             switch (userCommand) {
                 case 0:
                     login();
                     break;
                 case 1:
                     createAccount();
+                    break;
+                case 2:
+                    logout();
                     break;
             }
         }
@@ -124,6 +126,11 @@ public class schedulingUI {
             System.out.println("Failed to create account. Please try again.");
         }
     }
+    private void logout() {
+        schedulerFacade.logout();
+        System.out.println("Logout successful!");
+    }
+
     
     public static void main(String[] args) {
         schedulingUI schedulerUI = new schedulingUI();

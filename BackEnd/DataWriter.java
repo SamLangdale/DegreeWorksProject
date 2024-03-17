@@ -8,24 +8,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 public class DataWriter extends DataConstants {
-    
-    public static void saveStudents() {
-        UserList studentList = UserList.getInstance();
-        ArrayList<Student> students = studentList.getStudents();
-        JSONArray jsonStudents = new JSONArray();
-        
-        for (Student student : students) {
-            jsonStudents.add(getStudentJSON(student));
-        }
-        
-        try (FileWriter file = new FileWriter(STUDENT_FILE_NAME)) {
-            file.write(jsonStudents.toJSONString());
-            file.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    
+   
     public static void saveAdvisors() {
         UserList advisorList = UserList.getInstance();
         ArrayList<Advisor> advisors = advisorList.getAdvisors();
@@ -37,6 +20,23 @@ public class DataWriter extends DataConstants {
         
         try (FileWriter file = new FileWriter(ADVISOR_FILE_NAME)) {
             file.write(jsonAdvisors.toJSONString());
+            file.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void saveStudents() {
+        UserList studentList = UserList.getInstance();
+        ArrayList<Student> students = studentList.getStudents();
+        JSONArray jsonStudents = new JSONArray();
+    
+        for (Student student : students) {
+            jsonStudents.add(getStudentJSON(student));
+        }
+    
+        try (FileWriter file = new FileWriter(STUDENT_FILE_NAME)) {
+            file.write(jsonStudents.toJSONString());
             file.flush();
         } catch (IOException e) {
             e.printStackTrace();
@@ -68,10 +68,32 @@ public class DataWriter extends DataConstants {
         }
         studentDetails.put(STUDENT_WARNINGS, warningsArray);
         
-        //studentDetails.put(STUDENT_PROFILE_ID, student.getStudentProfileId().toString());
-        UUID studentProfileId = student.getStudentProfileId();
-        String studentProfileIdString = (studentProfileId != null) ? studentProfileId.toString() : "";
-        studentDetails.put(STUDENT_PROFILE_ID, studentProfileIdString);
+        UUID majorId = student.getMajorId();
+        studentDetails.put(STUDENT_MAJOR_ID, (majorId != null) ? majorId.toString() : "");
+        
+        studentDetails.put(STUDENT__MINOR, student.getMinor());
+        studentDetails.put(STUDENT_GPA, student.getGPA());
+        
+        JSONArray takenCoursesArray = new JSONArray();
+        for (Course course : student.getTakenCourses()) {
+            takenCoursesArray.add(course.getId().toString());
+        }
+        studentDetails.put(STUDENT_TAKEN_COURSES, takenCoursesArray);
+        
+        JSONArray currentCoursesArray = new JSONArray();
+        for (Course course : student.getCurrentCourses()) {
+            currentCoursesArray.add(course.getId().toString());
+        }
+        studentDetails.put(STUDENT_CURRENT_COURSES, currentCoursesArray);
+        
+        JSONArray requiredCoursesArray = new JSONArray();
+        for (Course course : student.getRequiredCourses()) {
+            requiredCoursesArray.add(course.getId().toString());
+        }
+        studentDetails.put(STUDENT_REQUIRED_COURSES, requiredCoursesArray);
+        
+        studentDetails.put(STUDENT_EXPECTED_GRAD_YEAR, student.getExpectedGradYear());
+        studentDetails.put(STUDENT_CURRENT_STUDENT_YEAR, student.getCurrentStudentYear());
         
         return studentDetails;
     }
@@ -184,14 +206,14 @@ public class DataWriter extends DataConstants {
     
     public static JSONObject getMajorJSON(Major major) {
         JSONObject majorDetails = new JSONObject();
-        majorDetails.put("Name", major.getName());
-        majorDetails.put("Majorid", major.getMajorId().toString());
+        majorDetails.put(MAJOR_NAME, major.getName());
+        majorDetails.put(MAJOR_ID, major.getMajorId().toString());
         
         JSONArray coursesArray = new JSONArray();
         for (UUID courseId : major.getCourses()) {
             coursesArray.add(courseId.toString());
         }
-        majorDetails.put("Courses", coursesArray);
+        majorDetails.put(MAJOR_COURSES, coursesArray);
         
         return majorDetails;
     }

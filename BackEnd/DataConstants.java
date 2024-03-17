@@ -27,9 +27,18 @@ public abstract class DataConstants {
     protected static final String STUDENT_NOTE_TITLE = "title";
     protected static final String STUDENT_NOTE_DATE = "date";
     protected static final String STUDENT_NOTE_CONTENT = "content";
-    protected static final String STUDENT_PROFILE_ID = "studentProfileid";
     protected static final String STUDENT_WARNINGS = "warnings";
-
+    protected static final String STUDENT_MAJOR_ID = "Majorid";
+    protected static final String STUDENT__MINOR = "minor";
+    protected static final String STUDENT_GPA = "GPA";
+    // protected static final String STUDENT_TAKEN_COURSES = "takenCoures";
+    // protected static final String STUDENT_CURRENT_COURSES = "CurrentCoures";
+    // protected static final String STUDENT_REQUIRED_COURSES = "RequiredCoures";
+    protected static final String STUDENT_TAKEN_COURSES = "takenCourses";
+    protected static final String STUDENT_CURRENT_COURSES = "currentCourses";
+    protected static final String STUDENT_REQUIRED_COURSES = "requiredCourses";
+    protected static final String STUDENT_EXPECTED_GRAD_YEAR = "ExpectedGradYear";
+    protected static final String STUDENT_CURRENT_STUDENT_YEAR = "currentStudentYear";
     // Courses
     protected static final String COURSE_FILE_NAME = "Data/courses.json";
     protected static final String COURSE_ID = "Couresid";
@@ -50,15 +59,5 @@ public abstract class DataConstants {
     protected static final String MAJOR_ID = "Majorid";
     protected static final String MAJOR_COURSES = "courses";
 
-    // Student Profile
-    protected static final String STUDENTPROFILE_FILE_NAME = "Data/StudentProfile.json";
-    protected static final String STUDENTPROFILE_ID = "studentprofileid";
-    protected static final String STUDENTPROFILE_MAJOR_ID = "Majorid";
-    protected static final String STUDENTPROFILE_MINOR = "minor";
-    protected static final String STUDENTPROFILE_GPA = "GPA";
-    protected static final String STUDENTPROFILE_TAKEN_COURSES = "takenCoures";
-    protected static final String STUDENTPROFILE_CURRENT_COURSES = "CurrentCoures";
-    protected static final String STUDENTPROFILE_REQUIRED_COURSES = "RequiredCoures";
-    protected static final String STUDENTPROFILE_EXPECTED_GRAD_YEAR = "ExpectedGradYear";
-    protected static final String STUDENTPROFILE_CURRENT_STUDENT_YEAR = "currentStudentYear";
+
 }

@@ -22,7 +22,7 @@ public class CourseList {
         courses.remove(course);
     }
     
-    public ArrayList<Course> getCoures() {
+    public ArrayList<Course> getCourses() {
         return courses;
     }
 

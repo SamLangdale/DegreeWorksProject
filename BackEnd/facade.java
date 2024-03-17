@@ -25,18 +25,23 @@ public class facade {
     public User getCurrentUser() {
         return currentUser;
     }
-
+    
     public boolean createAccount(String userName, String firstName, String lastName, String email, String uscid, UserType userType, String password) {
         // Check if the provided user type is valid
         if (userType == UserType.STUDENT || userType == UserType.ADVISOR) {
             // Create a new user object based on the userType
             User newUser;
             if (userType == UserType.STUDENT) {
-                newUser = new Student(UUID.randomUUID(), userName, firstName, lastName, email, uscid, new ArrayList<>(), new ArrayList<>(), UUID.randomUUID(), password);
+                // Generate unique IDs for the student
+                UUID studentId = UUID.randomUUID();
+                UUID majorId = UUID.randomUUID();
+                newUser = new Student(studentId, userName, firstName, lastName, email, uscid, new ArrayList<>(), new ArrayList<>(), majorId, "", 0.0, new ArrayList<>(), new ArrayList<>(), new ArrayList<>(), 0, "", password);
                 userList.addStudent((Student) newUser);
                 DataWriter.saveStudents(); // Save to student JSON file
             } else {
-                newUser = new Advisor(UUID.randomUUID(), userName, firstName, lastName, email, uscid, new ArrayList<>(), password);
+                // Generate unique ID for the advisor
+                UUID advisorId = UUID.randomUUID();
+                newUser = new Advisor(advisorId, userName, firstName, lastName, email, uscid, new ArrayList<>(), password);
                 userList.addAdvisor((Advisor) newUser);
                 DataWriter.saveAdvisors(); // Save to advisor JSON file
             }
@@ -47,6 +52,8 @@ public class facade {
             return false;
         }
     }
+    
+    
 }
 
 

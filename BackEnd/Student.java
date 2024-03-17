@@ -5,14 +5,30 @@ import java.util.UUID;
 public class Student extends User {
     private ArrayList<Note> notes;
     private ArrayList<Warning> warnings;
-    private UUID studentProfileId;
-
+    
+    private UUID majorId;
+    private String minor;
+    private double GPA;
+    private ArrayList<Course> takenCourses;
+    private ArrayList<Course> currentCourses;
+    private ArrayList<Course> requiredCourses;
+    private int expectedGradYear;
+    private String currentStudentYear;
     public Student(UUID id, String userName, String firstName, String lastName, String email, String uscid,
-                   ArrayList<Note> notes, ArrayList<Warning> warnings, UUID studentProfileId, String password) {
-        super(id, userName, firstName, lastName, email, uscid, password);
-        this.notes = notes;
-        this.warnings = warnings;
-        this.studentProfileId = studentProfileId;
+            ArrayList<Note> notes, ArrayList<Warning> warnings, UUID majorId, String minor, double GPA,
+            ArrayList<Course> takenCourses, ArrayList<Course> currentCourses, ArrayList<Course> requiredCourses,
+            int expectedGradYear, String currentStudentYear, String password) {
+                super(id, userName, firstName, lastName, email, uscid, password);
+                this.notes = notes;
+                this.warnings = warnings;
+                this.majorId = majorId;
+                this.minor = minor;
+                this.GPA = GPA;
+                this.takenCourses = takenCourses;
+                this.currentCourses = currentCourses;
+                this.requiredCourses = requiredCourses;
+                this.expectedGradYear = expectedGradYear;
+                this.currentStudentYear = currentStudentYear;
     }
 
     public ArrayList<Note> getNotes() {
@@ -23,10 +39,71 @@ public class Student extends User {
         return warnings;
     }
 
-    public UUID getStudentProfileId() {
-        return studentProfileId;
+    public UUID getMajorId() {
+        return majorId;
+    }
+
+    public void setMajorId(UUID majorId) {
+        this.majorId = majorId;
+    }
+
+    public String getMinor() {
+        return minor;
+    }
+
+    public void setMinor(String minor) {
+        this.minor = minor;
+    }
+
+    public double getGPA() {
+        return GPA;
+    }
+
+    public void setGPA(double GPA) {
+        this.GPA = GPA;
+    }
+
+    public ArrayList<Course> getTakenCourses() {
+        return takenCourses;
+    }
+
+    public void setTakenCourses(ArrayList<Course> takenCourses) {
+        this.takenCourses = takenCourses;
+    }
+
+    public ArrayList<Course> getCurrentCourses() {
+        return currentCourses;
+    }
+
+    public void setCurrentCourses(ArrayList<Course> currentCourses) {
+        this.currentCourses = currentCourses;
+    }
+
+    public ArrayList<Course> getRequiredCourses() {
+        return requiredCourses;
+    }
+
+    public void setRequiredCourses(ArrayList<Course> requiredCourses) {
+        this.requiredCourses = requiredCourses;
+    }
+
+    public int getExpectedGradYear() {
+        return expectedGradYear;
+    }
+
+    public void setExpectedGradYear(int expectedGradYear) {
+        this.expectedGradYear = expectedGradYear;
+    }
+
+    public String getCurrentStudentYear() {
+        return currentStudentYear;
+    }
+
+    public void setCurrentStudentYear(String currentStudentYear) {
+        this.currentStudentYear = currentStudentYear;
     }
 }
+
 
 
 

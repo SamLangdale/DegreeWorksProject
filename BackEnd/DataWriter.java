@@ -121,7 +121,7 @@ public class DataWriter extends DataConstants {
 
     public static void saveCourses() {
         CourseList courseList = CourseList.getInstance();
-        ArrayList<Course> courses = courseList.getCoures();
+        ArrayList<Course> courses = courseList.getCourses();
         JSONArray jsonCourses = new JSONArray();
 
         for (Course course : courses) {

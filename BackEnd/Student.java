@@ -35,7 +35,7 @@ public class Student extends User {
                     this.Advisor = Advisor;
                 else
                     AssignAdvisor(this);
-                    System.out.println(this.firstName+" your advsor is: "+this.Advisor);
+                    //System.out.println(this.firstName+" your advsor is: "+this.Advisor); // code check
                 }
 
 
@@ -140,7 +140,7 @@ public class Student extends User {
     public void AssignAdvisor(Student student) {
         while (!student.hasAdvisor(student)) {
             student.Advisor = list.getAdvisors().get(0); // temp code
-
+            list.getAdvisors().get(0).addAssignedStudent(student);
         }
 
     }

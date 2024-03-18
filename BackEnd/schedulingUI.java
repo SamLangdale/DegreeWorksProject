@@ -108,6 +108,7 @@ public class schedulingUI {
         switch (choice) {
             case 1:
                 userType = UserType.STUDENT;
+                System.out.println();
                 break;
             case 2:
                 userType = UserType.ADVISOR;

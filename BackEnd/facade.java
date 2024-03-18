@@ -37,7 +37,7 @@ public class facade {
                 // Generate unique IDs for the student
                 UUID studentId = UUID.randomUUID();
                 UUID majorId = UUID.randomUUID();
-                newUser = new Student(studentId, userName, firstName, lastName, email, uscid, new ArrayList<>(), new ArrayList<>(), majorId, "", 0.0, new ArrayList<>(), new ArrayList<>(), new ArrayList<>(), 0, "", password);
+                newUser = new Student(studentId, userName, firstName, lastName, email, uscid, new ArrayList<>(), new ArrayList<>(), majorId, "", 0.0, new ArrayList<>(), new ArrayList<>(), new ArrayList<>(), 0, "", password,null);
                 userList.addStudent((Student) newUser);
                 DataWriter.saveStudents(); // Save to student JSON file
             } else {
@@ -136,6 +136,9 @@ public class facade {
         }
         return false;
     }
+
+
+
 
 
 }

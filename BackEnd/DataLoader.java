@@ -78,6 +78,7 @@ public static ArrayList<Student> getStudents() {
             String email = (String) studentObj.get(STUDENT_EMAIL);
             String uscid = (String) studentObj.get(STUDENT_USCID);
             String password = (String) studentObj.get(STUDENT_PASSWORD);
+            Advisor Advisor = (Advisor) studentObj.get(STUDENT_ADVISOR);
 
             JSONArray notesArray = (JSONArray) studentObj.get(STUDENT_NOTES);
             ArrayList<Note> notes = new ArrayList<>();
@@ -197,7 +198,7 @@ public static ArrayList<Student> getStudents() {
 
             // Check if id and majorId are not null before creating a Student object
             if (id != null && majorId != null) {
-                Student student = new Student(id, userName, firstName, lastName, email, uscid, notes, warnings, majorId, minor, GPA, takenCourses, currentCourses, requiredCourses, expectedGradYear, currentStudentYear, password);
+                Student student = new Student(id, userName, firstName, lastName, email, uscid, notes, warnings, majorId, minor, GPA, takenCourses, currentCourses, requiredCourses, expectedGradYear, currentStudentYear, password, Advisor);
                 students.add(student);
             } else {
                 // Handle case where id or majorId is null

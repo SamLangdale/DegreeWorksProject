@@ -5,6 +5,7 @@ import java.util.UUID;
 public class Student extends User {
     private ArrayList<Note> notes;
     private ArrayList<Warning> warnings;
+    private static UserList list = UserList.getInstance();
     
     private UUID majorId;
     private String minor;
@@ -14,10 +15,11 @@ public class Student extends User {
     private ArrayList<Course> requiredCourses;
     private int expectedGradYear;
     private String currentStudentYear;
+    private Advisor Advisor;
     public Student(UUID id, String userName, String firstName, String lastName, String email, String uscid,
             ArrayList<Note> notes, ArrayList<Warning> warnings, UUID majorId, String minor, double GPA,
             ArrayList<Course> takenCourses, ArrayList<Course> currentCourses, ArrayList<Course> requiredCourses,
-            int expectedGradYear, String currentStudentYear, String password) {
+            int expectedGradYear, String currentStudentYear, String password, Advisor Advisor) {// new parm advisor
                 super(id, userName, firstName, lastName, email, uscid, password);
                 this.notes = notes;
                 this.warnings = warnings;
@@ -29,6 +31,16 @@ public class Student extends User {
                 this.requiredCourses = requiredCourses;
                 this.expectedGradYear = expectedGradYear;
                 this.currentStudentYear = currentStudentYear;
+                if(hasAdvisor(this) || list == null )// if the list is null then no advisors should be assigned yet
+                    this.Advisor = Advisor;
+                else
+                    AssignAdvisor(this);
+                    System.out.println(this.firstName+" your advsor is: "+this.Advisor);
+                }
+
+
+    public Advisor getAdvisor() {
+        return this.Advisor;
     }
 
     public ArrayList<Note> getNotes() {
@@ -42,6 +54,7 @@ public class Student extends User {
     public UUID getMajorId() {
         return majorId;
     }
+    private boolean hasAdvisor(Student Student) {return Student.Advisor != null; }
 
     public void setMajorId(UUID majorId) {
         this.majorId = majorId;
@@ -122,6 +135,14 @@ public class Student extends User {
         for (Warning warning : warnings) {
             System.out.println(warning);
         }
+    }
+
+    public void AssignAdvisor(Student student) {
+        while (!student.hasAdvisor(student)) {
+            student.Advisor = list.getAdvisors().get(0); // temp code
+
+        }
+
     }
 }
 

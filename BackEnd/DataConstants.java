@@ -39,6 +39,7 @@ public abstract class DataConstants {
     protected static final String STUDENT_REQUIRED_COURSES = "requiredCourses";
     protected static final String STUDENT_EXPECTED_GRAD_YEAR = "ExpectedGradYear";
     protected static final String STUDENT_CURRENT_STUDENT_YEAR = "currentStudentYear";
+    protected static final String STUDENT_ADVISOR = "advisor";
     // Courses
     protected static final String COURSE_FILE_NAME = "Data/courses.json";
     protected static final String COURSE_ID = "Couresid";

@@ -58,26 +58,29 @@ public class facade {
         currentUser = null;
         userList.saveUsers();
     }
-       public void viewCoursesTaken() {
-        List<Course> coursesTaken = new ArrayList<>();
+    public 
+    
+    //    public void viewCoursesTaken() {
+    //     List<Course> coursesTaken = new ArrayList<>();
 
-        // Iterate through all courses
-        for (Course course : courseList.getCourses()) {
-            // Check if the course has grades recorded
-            if (!course.getGrades().isEmpty()) {
-                coursesTaken.add(course);
-                System.out.println("Course: " + course.getCourseName());
-                System.out.println("Grade: " + calculateAverageGrade(course));
-                System.out.println("Status: " + (hasPassed(course) ? "Passed" : "Failed"));
-                System.out.println();
-            }
-        }
+    //     // Iterate through all courses
+    //     for (Course course : courseList.getCourses()) {
+    //         // Check if the course has grades recorded
+    //         if (!course.getGrades().isEmpty()) {
+    //             coursesTaken.add(course);
+    //             System.out.println("Course: " + course.getCourseName());
+    //             System.out.println("Grade: " + calculateAverageGrade(course));
+    //             System.out.println("Status: " + (hasPassed(course) ? "Passed" : "Failed"));
+    //             System.out.println();
+    //         }
+    //     }
 
-        // If no courses are taken
-        if (coursesTaken.isEmpty()) {
-            System.out.println("You haven't taken any courses yet.");
-        }
-    }
+    //     // If no courses are taken
+    //     if (coursesTaken.isEmpty()) {
+    //         System.out.println("You haven't taken any courses yet.");
+    //     }
+    // }
+
 
       // Helper method to calculate the average grade for a course
       private Grades calculateAverageGrade(Course course) {

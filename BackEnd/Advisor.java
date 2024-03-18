@@ -22,36 +22,25 @@ public class Advisor extends User {
     public ArrayList<Student> getAssignedStudents() {
         return assignedStudents;
     }
-
-    // Add note to a student
-    public void addNote(Student student) {
-        //todo: Add note functionality
+      // Add note to a student
+      public void addNoteToStudent(Student student, String title, String date, String content) {
+        student.addNote(new Note(title, date, content));
     }
 
     // Search for a student by last name, first name, and student ID
-    public boolean search(String lastName, String firstName, int studentID) {
-        //todo: Search functionality
-        return false; // Placeholder return
-    }
-
-    // Remove a note for a student
-    public void removeNote(Student student) {
-        //todo: Remove note functionality
-    }
-
-    // Edit a note for a student
-    public void editNote(Student student) {
-        //todo: Edit note functionality
-    }
-
-    // Select a student
-    public boolean selectStudent(Student student) {
-        //todo: Select student functionality
-        return false; // Placeholder return
+    public Student searchStudent(String lastName, String firstName, String studentID) {
+        for (Student student : assignedStudents) {
+            if (student.getLastName().equalsIgnoreCase(lastName) && student.getFirstName().equalsIgnoreCase(firstName) && student.getUSCID().equalsIgnoreCase(studentID)) {
+                return student;
+            }
+        }
+        return null;
     }
 
     // View warnings for a student
-    public void viewWarnings(Student student) {
-        //todo: View warnings functionality
+    public void viewWarningsForStudent(Student student) {
+        student.displayWarnings();
     }
+
+
 }

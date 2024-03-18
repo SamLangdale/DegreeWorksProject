@@ -102,6 +102,27 @@ public class Student extends User {
     public void setCurrentStudentYear(String currentStudentYear) {
         this.currentStudentYear = currentStudentYear;
     }
+
+    public void addNote(Note note) {
+        notes.add(note);
+    }
+
+    public void removeNote(Note note) {
+        notes.remove(note);
+    }
+
+    public void editNote(Note oldNote, Note newNote) {
+        int index = notes.indexOf(oldNote);
+        if (index != -1) {
+            notes.set(index, newNote);
+        }
+    }
+
+    public void displayWarnings() {
+        for (Warning warning : warnings) {
+            System.out.println(warning);
+        }
+    }
 }
 
 

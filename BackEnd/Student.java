@@ -144,6 +144,12 @@ public class Student extends User {
         }
 
     }
+    public String getUSCID(){
+        return uscid;
+    }
+    public void setUSCID(String uscid) {
+        this.uscid = uscid;
+    }
 }
 
 

@@ -71,43 +71,44 @@ public static ArrayList<Student> getStudents() {
             if (idString != null && !idString.isEmpty()) {
                 id = UUID.fromString(idString);
             }
-
             String userName = (String) studentObj.get(STUDENT_USERNAME);
             String firstName = (String) studentObj.get(STUDENT_FIRST_NAME);
             String lastName = (String) studentObj.get(STUDENT_LAST_NAME);
             String email = (String) studentObj.get(STUDENT_EMAIL);
             String uscid = (String) studentObj.get(STUDENT_USCID);
             String password = (String) studentObj.get(STUDENT_PASSWORD);
-            Advisor Advisor = (Advisor) studentObj.get(STUDENT_ADVISOR);
+            String Advisorid = (String) studentObj.get(STUDENT_ADVISOR);
 
             JSONArray notesArray = (JSONArray) studentObj.get(STUDENT_NOTES);
             ArrayList<Note> notes = new ArrayList<>();
-            for (Object noteObj : notesArray) {
-                JSONObject note = (JSONObject) noteObj;
-                String title = (String) note.get(STUDENT_NOTE_TITLE);
-                String date = (String) note.get(STUDENT_NOTE_DATE);
-                String content = (String) note.get(STUDENT_NOTE_CONTENT);
-                notes.add(new Note(title, date, content));
-            }
+        
+            // for (Object noteObj : notesArray) {
+            //     JSONObject note = (JSONObject) noteObj;
+            //     String title = (String) note.get(STUDENT_NOTE_TITLE);
+            //     String date = (String) note.get(STUDENT_NOTE_DATE);
+            //     String content = (String) note.get(STUDENT_NOTE_CONTENT);
+            //     notes.add(new Note(title, date, content));
+            // }
 
             JSONArray warningsArray = (JSONArray) studentObj.get(STUDENT_WARNINGS);
             ArrayList<Warning> warnings = new ArrayList<>();
-            for (Object warningObj : warningsArray) {
-                if (warningObj instanceof String) {
-                    String warningStr = (String) warningObj;
-                    // Check if the Warning enum contains the given warning string
-                    try {
-                        Warning warning = Warning.valueOf(warningStr);
-                        warnings.add(warning);
-                    } catch (IllegalArgumentException e) {
-                        // Handle the case where the warning string is not a valid enum value
-                        System.err.println("Invalid warning: " + warningStr);
-                    }
-                } else {
-                    // Handle the case where the warning is not a string
-                    System.err.println("Invalid warning format: " + warningObj);
-                }
-            }
+            
+            // for (Object warningObj : warningsArray) {
+            //     if (warningObj instanceof String) {
+            //         String warningStr = (String) warningObj;
+            //         // Check if the Warning enum contains the given warning string
+            //         try {
+            //             Warning warning = Warning.valueOf(warningStr);
+            //             warnings.add(warning);
+            //         } catch (IllegalArgumentException e) {
+            //             // Handle the case where the warning string is not a valid enum value
+            //             System.err.println("Invalid warning: " + warningStr);
+            //         }
+            //     } else {
+            //         // Handle the case where the warning is not a string
+            //         System.err.println("Invalid warning format: " + warningObj);
+            //     }
+            // }
 
             UUID majorId = null;
             Object majorIdObj = studentObj.get(STUDENT_MAJOR_ID);
@@ -198,7 +199,7 @@ public static ArrayList<Student> getStudents() {
 
             // Check if id and majorId are not null before creating a Student object
             if (id != null && majorId != null) {
-                Student student = new Student(id, userName, firstName, lastName, email, uscid, notes, warnings, majorId, minor, GPA, takenCourses, currentCourses, requiredCourses, expectedGradYear, currentStudentYear, password, Advisor);
+                Student student = new Student(id, userName, firstName, lastName, email, uscid, notes, warnings, majorId, minor, GPA, takenCourses, currentCourses, requiredCourses, expectedGradYear, currentStudentYear, password, Advisorid);
                 students.add(student);
             } else {
                 // Handle case where id or majorId is null

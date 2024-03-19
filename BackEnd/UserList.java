@@ -1,5 +1,6 @@
 package BackEnd;
 import java.util.ArrayList;
+import java.util.*;
 
 public class UserList {
     private static UserList userList;
@@ -104,7 +105,14 @@ public class UserList {
         // No user found with the provided credentials
         return null;
     }
-    
+    public Advisor findAdvisorID(String ID) {
+        for (Advisor advisor : advisors) {
+            if (advisor.getUscid().equals(ID)) {
+                return advisor;
+            }
+        }
+        return null;
+    }
 }
 
 

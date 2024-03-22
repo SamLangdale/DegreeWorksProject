@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class schedulingUI {
     private static final String WELCOME_MESSAGE = "Welcome to our Scheduling System";
     private static final String[] mainMenuOptions = {"Login", "Create Account", "Logout", "Exit"};
+    private static final String[] StudentMenu = {"view Classes","generate schedule","choose applicaiton area"};
     private Scanner scanner;
     private facade schedulerFacade; 
 
@@ -18,6 +19,12 @@ public class schedulingUI {
 
         // Loop's as long as we want to keep interacting with the scheduling system
         while (true) {
+            if(schedulerFacade.getCurrentUser() == null) {
+                System.out.println("no user logged in");
+            }
+            else {
+                System.out.println("Currently you are: "+schedulerFacade.getCurrentUser().firstName);
+            }
             displayMainMenu();
             int userCommand = getUserCommand(mainMenuOptions.length);
 
@@ -49,10 +56,18 @@ public class schedulingUI {
 
     private void displayMainMenu() {
         System.out.println("\n************ Main Menu *************");
-        for (int i = 0; i < mainMenuOptions.length; i++) {
-            System.out.println((i + 1) + ". " + mainMenuOptions[i]);
+        if(schedulerFacade.getCurrentUser() == null) {
+            for (int i = 0; i < mainMenuOptions.length; i++) {
+                System.out.println((i + 1) + ". " + mainMenuOptions[i]);
+            }
+            System.out.println("\n");
         }
-        System.out.println("\n");
+        else if(schedulerFacade.isStudent(schedulerFacade.getCurrentUser())) {// something to differ student from advisor
+            for (int i = 0; i < StudentMenu.length; i++) {
+                System.out.println((i + 1) + ". " + StudentMenu[i]);
+            }
+            System.out.println("\n");
+        }
     }
 
     // Get's the user's command number; if it's not valid, return -1
@@ -71,17 +86,21 @@ public class schedulingUI {
 
         return -1;
     }
-    private void login() {
+    private User login() {
         System.out.print("Enter your username: ");
         String username = scanner.nextLine();
         System.out.print("Enter your password: ");
         String password = scanner.nextLine();
-    
-        if (schedulerFacade.login(username, password)) {
-            System.out.println("Login successful!");
-        } else {
-            System.out.println("Login failed. Invalid username or password.");
+        if(schedulerFacade.login(username, password) == null){
+            System.out.print("Login Failed");
+            return null;
         }
+        else {
+            System.out.println("login Success");
+            return schedulerFacade.login(username, password);
+        }
+        
+        
     }
     private void createAccount() {
         System.out.print("Enter your username: ");
@@ -136,5 +155,8 @@ public class schedulingUI {
     public static void main(String[] args) {
         schedulingUI schedulerUI = new schedulingUI();
         schedulerUI.run();
+    }
+    public void DisplayCourses(Student Student) {
+
     }
 }

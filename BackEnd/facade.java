@@ -12,15 +12,16 @@ public class facade {
         userList = UserList.getInstance();
     }
 
-    public boolean login(String userName, String password) {
+    public User login(String userName, String password) { // student login NEED ADVISOR
         // Check if the provided userName and password match with any user in the system
         User user = userList.getUserByUsernameAndPassword(userName, password);
 
         if (user != null) {
             currentUser = user;
-            return true;
+            return (Student) user;
         } else {
-            return false; // No user found with the provided credentials
+            currentUser = null;
+            return null; // No user found with the provided credentials
         }
     }
 
@@ -113,6 +114,14 @@ public class facade {
             System.out.println("You have completed all available courses.");
         }
     }
+    public boolean isStudent(User user) {
+        for(Student Student : userList.getStudents()) {
+            if(Student.id == user.id) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     // Helper method to check if all co-requisites are fulfilled for a course
     private boolean areCoRequisitesFulfilled(Course course) {
@@ -134,6 +143,7 @@ public class facade {
         }
         return false;
     }
+
 
 
 

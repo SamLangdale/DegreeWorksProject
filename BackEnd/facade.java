@@ -7,9 +7,12 @@ public class facade {
     private UserList userList;
     private User currentUser;
     private CourseList courseList;
+    private Student CurrentStudent;
+    private Advisor CurrentAdvisor;
 
     public facade() {
         userList = UserList.getInstance();
+        courseList = CourseList.getInstance();
     }
 
     public User login(String userName, String password) { // student login NEED ADVISOR
@@ -17,8 +20,16 @@ public class facade {
         User user = userList.getUserByUsernameAndPassword(userName, password);
 
         if (user != null) {
+
             currentUser = user;
-            return (Student) user;
+            if(user instanceof Advisor) {// instance of can differ an advior and student
+                CurrentAdvisor = (Advisor)user;
+                return (Advisor) user;
+            }
+            else {
+                CurrentStudent = (Student)user;
+                return (Student) user;
+            }
         } else {
             currentUser = null;
             return null; // No user found with the provided credentials
@@ -27,6 +38,12 @@ public class facade {
 
     public User getCurrentUser() {
         return currentUser;
+    }
+    public void setCurrentUser(User user) {
+        this.currentUser = user;
+    }
+    public Advisor getCurrentAdvisor() {
+        return CurrentAdvisor;
     }
     
     public boolean createAccount(String userName, String firstName, String lastName, String email, String uscid, UserType userType, String password) {
@@ -60,23 +77,31 @@ public class facade {
         userList.saveUsers();
     }
        public void viewCoursesTaken() {
-        List<Course> coursesTaken = new ArrayList<>();
+        //List<Course> coursesTaken = new ArrayList<>();
 
         // Iterate through all courses
+        for (Course course : CurrentStudent.getTakenCourses()) {
+            System.out.println("Course : "+course.getCourseAcronym()+course.getCourseNumber());
+            }
+        // If no courses are taken
+        if (CurrentStudent.getTakenCourses().isEmpty()) {
+            System.out.println("You haven't taken any courses yet.");
+        }
+    }
+    public void courseSearchReq(RequirementType acro) {
         for (Course course : courseList.getCourses()) {
-            // Check if the course has grades recorded
-            if (!course.getGrades().isEmpty()) {
-                coursesTaken.add(course);
-                System.out.println("Course: " + course.getCourseName());
-                System.out.println("Grade: " + calculateAverageGrade(course));
-                System.out.println("Status: " + (hasPassed(course) ? "Passed" : "Failed"));
-                System.out.println();
+            for(RequirementType req : course.getRequirementTypes()) {
+                if(req.equals(acro)) { // test
+                    System.out.println("Course : "+course.getCourseAcronym()+course.getCourseNumber());
+                }
             }
         }
 
-        // If no courses are taken
-        if (coursesTaken.isEmpty()) {
-            System.out.println("You haven't taken any courses yet.");
+    }
+    public void addadvise(String id) {
+        if(userList.findStudentID(id) != null)
+        {
+            CurrentAdvisor.addAssignedStudent(userList.findStudentID(id));
         }
     }
 
@@ -98,29 +123,24 @@ public class facade {
 
     // Method to view the courses yet to be taken
     public void viewCoursesToTake() {
-        List<Course> coursesToTake = new ArrayList<>();
-
-        // Iterate through all courses
-        for (Course course : courseList.getCourses()) {
-            // Check if the course doesn't have any grades recorded
-            if (course.getGrades().isEmpty() && areCoRequisitesFulfilled(course)) {
-                coursesToTake.add(course);
-                System.out.println("Course: " + course.getCourseName());
+        for (Course course : CurrentStudent.getRequiredCourses()) {
+            System.out.println("Course : "+course.getCourseAcronym()+course.getCourseNumber()+" Req Type:"+course.getRequirementTypes());
             }
-        }
-
-        // If no courses are left to take
-        if (coursesToTake.isEmpty()) {
-            System.out.println("You have completed all available courses.");
-        }
     }
-    public boolean isStudent(User user) {
-        for(Student Student : userList.getStudents()) {
-            if(Student.id == user.id) {
-                return true;
-            }
-        }
-        return false;
+    // // public boolean isStudent(User user) {
+    // //     if(user instanceof Student) {
+    // //         return false;
+    // //     }
+    //     for(Student Student : userList.getStudents()) {
+    //         if(Student.id == user.id) {
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // }
+    public void viewReqArea() {
+          
+
     }
 
     // Helper method to check if all co-requisites are fulfilled for a course

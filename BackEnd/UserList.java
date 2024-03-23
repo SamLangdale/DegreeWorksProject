@@ -113,6 +113,14 @@ public class UserList {
         }
         return null;
     }
+    public Student findStudentID(String ID) {
+        for (Student student : getStudents()) {
+            if (student.getUscid().equals(ID)) {
+                return student;
+            }
+        }
+        return null;
+    }
 }
 
 

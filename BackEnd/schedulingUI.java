@@ -62,7 +62,7 @@ public class schedulingUI {
             }
             System.out.println("\n");
         }
-        else if(schedulerFacade.isStudent(schedulerFacade.getCurrentUser())) {// something to differ student from advisor
+        else if(schedulerFacade.getCurrentUser() instanceof Student) {// something to differ student from advisor
             for (int i = 0; i < StudentMenu.length; i++) {
                 System.out.println((i + 1) + ". " + StudentMenu[i]);
             }
@@ -97,7 +97,17 @@ public class schedulingUI {
         }
         else {
             System.out.println("login Success");
+
+            // if (schedulerFacade.login(username, password) instanceof Student) {
+            //     schedulerFacade.setCurrentUser(schedulerFacade.login(username, password));
+            //     DisplayCourses((Student)schedulerFacade.login(username, password));
+            // }
+            // else {
+            //     schedulerFacade.setCurrentUser(schedulerFacade.login(username, password));
+            //     AdvisorTest((Advisor)schedulerFacade.login(username, password));
+            // }
             return schedulerFacade.login(username, password);
+
         }
         
         
@@ -142,6 +152,7 @@ public class schedulingUI {
     
         if (accountCreated) {
             System.out.println("Account created successfully!");
+
         } else {
             System.out.println("Failed to create account. Please try again.");
         }
@@ -156,7 +167,29 @@ public class schedulingUI {
         schedulingUI schedulerUI = new schedulingUI();
         schedulerUI.run();
     }
-    public void DisplayCourses(Student Student) {
+     public void DisplayCourses(Student Student) {
+         System.out.println("Taken Course :");
+         schedulerFacade.viewCoursesTaken();
+         System.out.println("courses to be taken: ");
+         schedulerFacade.viewCoursesToTake();
+         System.out.println("search for REQ type: Major Req");
+         schedulerFacade.courseSearchReq(RequirementType.MR);
 
-    }
+     }
+    // public void StudentDisplayCoursesTests(Student Student) {
+    //     System.out.println("Taken Course :");
+    //     schedulerFacade.viewCoursesTaken();
+    //     System.out.println("courses to be taken: ");
+    //     schedulerFacade.viewCoursesToTake();
+    //     System.out.println("Courses that fulfill Major Requiment:");
+    //     schedulerFacade.courseSearchReq(RequirementType.MR);
+
+    // }
+    // public void AdvisorTest(Advisor advisor) {
+    //     System.out.println("looking up advisee to assign to self . . ");
+    //     schedulerFacade.addadvise("1234");
+    //     System.out.println("advisor assigned to :"+schedulerFacade.getCurrentAdvisor().getAssignedStudents().get(0).firstName);// test
+
+
+    // }
 }

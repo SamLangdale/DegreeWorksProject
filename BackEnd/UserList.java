@@ -48,7 +48,7 @@ public class UserList {
     }
 
     public boolean addStudent(Student student) {
-        if (haveStudent(student.getUserName())) return false;
+        if (haveStudent(student.getUserName())) {return false;}
 
         students.add(student);
         return true;

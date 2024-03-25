@@ -23,6 +23,66 @@ public class UserListTesting {
     }
 
     @Test
+    public void testGetStudent() {
+        // Test getting an existing student
+        assertNotNull(users.getStudent("student1"));
+    }
+
+    @Test
+    public void testGetNonExistingStudent() {
+        // Test getting a non-existing student
+        assertNull(users.getStudent("nonExistingStudent"));
+    }
+
+    @Test
+    public void testGetAdvisor() {
+        // Test getting an existing advisor
+        assertNotNull(users.getAdvisor("advisor1"));
+    }
+
+    @Test
+    public void testGetNonExistingAdvisor() {
+        // Test getting a non-existing advisor
+        assertNull(users.getAdvisor("nonExistingAdvisor"));
+    }
+
+    @Test
+    public void testAddStudentWithNull() {
+        // Test adding a student with null values
+        assertFalse(users.addStudent(null));
+    }
+
+    @Test
+    public void testAddAdvisorWithNull() {
+        // Test adding an advisor with null values
+        assertFalse(users.addAdvisor(null));
+    }
+
+    @Test
+    public void testHaveStudent() {
+        // Test checking if an existing student exists
+        assertTrue(users.haveStudent("student1"));
+    }
+
+    @Test
+    public void testHaveNonExistingStudent() {
+        // Test checking if a non-existing student exists
+        assertFalse(users.haveStudent("nonExistingStudent"));
+    }
+
+    @Test
+    public void testHaveAdvisor() {
+        // Test checking if an existing advisor exists
+        assertTrue(users.haveAdvisor("advisor1"));
+    }
+
+    @Test
+    public void testHaveNonExistingAdvisor() {
+        // Test checking if a non-existing advisor exists
+        assertFalse(users.haveAdvisor("nonExistingAdvisor"));
+    }
+
+    @Test
     public void testAddStudent() {
         // Test adding a new student
         Student student = new Student(UUID.randomUUID(), "testStudent", "Test", "Student", "teststudent@example.com", "123456789",
@@ -57,8 +117,6 @@ public class UserListTesting {
         users.addAdvisor(advisor); // Add once
         assertFalse(users.addAdvisor(advisor)); // Try adding again
     }
-
-    // Add more test methods for other functionalities
 
     private void addUserTestData() {
         // Adding test students

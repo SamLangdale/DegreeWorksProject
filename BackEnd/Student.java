@@ -153,9 +153,7 @@ public class Student extends User {
     public void setUSCID(String uscid) {
         this.uscid = uscid;
     }
-    // public String StudentToString(){
-    //     return this.firstName+" "+this.lastName+" "+this.getAdvisor().firstName;
-    // }
+
 }
 
 

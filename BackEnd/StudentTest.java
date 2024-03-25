@@ -37,8 +37,6 @@ public class StudentTest {
         assertFalse(student.getNotes().contains(noteToRemove));
     }
 
-    // Add more test methods for other functionalities
-
     private Student createTestStudent() {
         return new Student(UUID.randomUUID(), "testStudent", "John", "Doe", "john@example.com", "123456789",
                 new ArrayList<Note>(), new ArrayList<Warning>(), UUID.randomUUID(), "Computer Science", 3.5,

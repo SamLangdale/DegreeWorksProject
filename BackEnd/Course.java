@@ -14,9 +14,11 @@ public class Course {
     protected ArrayList<CoReq> coReqs;
     protected ArrayList<Grades> grades;
     protected ArrayList<RequirementType> requirementTypes;
+    public UserList list;
 
     public Course(String courseName, String courseNumber, int creditHours, boolean fall, boolean spring,
                   String courseAcronym) {
+        list = UserList.getInstance();
         this.id = UUID.randomUUID();
         this.courseName = courseName;
         this.courseNumber = courseNumber;

@@ -39,8 +39,6 @@ public class AdvisorTest {
         assertFalse(advisor.getAssignedStudents().contains(student));
     }
 
-    // Add more test methods for other functionalities
-
     private Advisor createTestAdvisor() {
         return new Advisor(UUID.randomUUID(), "testAdvisor", "Michael", "Johnson", "michael@example.com", "111222333",
                 new ArrayList<Student>(), "password");

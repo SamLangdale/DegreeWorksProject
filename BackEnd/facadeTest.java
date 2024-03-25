@@ -50,8 +50,8 @@ public void SameUSCID() {
     testFacade.createAccount("Username", "first", "Last", "@email", "U5555",UserType.STUDENT,"1234");
     // checks to see if duplacate accounts can be made 
     assertFalse("Duplacate Made",testFacade.createAccount("Username1", "first", "Last", "@email", "U5555",UserType.STUDENT,"1234"));
-
 }
+
 
 
 

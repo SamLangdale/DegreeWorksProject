@@ -97,15 +97,6 @@ public class schedulingUI {
         }
         else {
             System.out.println("login Success");
-
-            // if (schedulerFacade.login(username, password) instanceof Student) {
-            //     schedulerFacade.setCurrentUser(schedulerFacade.login(username, password));
-            //     DisplayCourses((Student)schedulerFacade.login(username, password));
-            // }
-            // else {
-            //     schedulerFacade.setCurrentUser(schedulerFacade.login(username, password));
-            //     AdvisorTest((Advisor)schedulerFacade.login(username, password));
-            // }
             return schedulerFacade.login(username, password);
 
         }

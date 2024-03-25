@@ -48,7 +48,11 @@ public class facade {
     
     public boolean createAccount(String userName, String firstName, String lastName, String email, String uscid, UserType userType, String password) {
         // Check if the provided user type is valid
-        if (userType == UserType.STUDENT || userType == UserType.ADVISOR) {
+        if (userType == UserType.STUDENT || userType == UserType.ADVISOR) { // reminder to reformat bool logic MP
+            if(userList.findAdvisorID(uscid) != null || userList.findStudentID(uscid) != null) {
+                System.out.println("You Already have An account");
+                return false;
+            }
             // Create a new user object based on the userType
             User newUser;
             if (userType == UserType.STUDENT) {
@@ -56,7 +60,10 @@ public class facade {
                 UUID studentId = UUID.randomUUID();
                 UUID majorId = UUID.randomUUID();
                 newUser = new Student(studentId, userName, firstName, lastName, email, uscid, new ArrayList<>(), new ArrayList<>(), majorId, "", 0.0, new ArrayList<>(), new ArrayList<>(), new ArrayList<>(), 0, "", password,null);
-                userList.addStudent((Student) newUser);
+                if(!userList.addStudent((Student) newUser)) {
+                    System.out.println("username taken, Do you already have an Account?");
+                    return false;
+                }
                 DataWriter.saveStudents(); // Save to student JSON file
             } else {
                 // Generate unique ID for the advisor
@@ -77,9 +84,6 @@ public class facade {
         userList.saveUsers();
     }
        public void viewCoursesTaken() {
-        //List<Course> coursesTaken = new ArrayList<>();
-
-        // Iterate through all courses
         for (Course course : CurrentStudent.getTakenCourses()) {
             System.out.println("Course : "+course.getCourseAcronym()+course.getCourseNumber());
             }

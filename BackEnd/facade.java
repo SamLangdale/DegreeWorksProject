@@ -100,13 +100,16 @@ public class facade {
                 }
             }
         }
-
     }
-    public void addadvise(String id) {
+    public boolean addadvise(String id) {
+        if(id == null) { return false;}
         if(userList.findStudentID(id) != null)
         {
             CurrentAdvisor.addAssignedStudent(userList.findStudentID(id));
+            return true;
         }
+        System.out.println("No User Found!");
+        return false;
     }
 
 

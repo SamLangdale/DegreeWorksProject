@@ -35,7 +35,7 @@ public void NullLoginTests() {
 @Test
 public void CreateAccountTest() {
         facade testFacade = new facade();
-        assertTrue("Account Not Created",testFacade.createAccount("Username", "first", "Last", "@email", "U5555",UserType.STUDENT,"1234"));
+        assertTrue("Account Not Created",testFacade.createAccount("Username1", "first", "Last", "@email", "U55556",UserType.STUDENT,"1234"));
 }
 @Test
 public void DupAccountTest() {
@@ -51,7 +51,13 @@ public void SameUSCID() {
     // checks to see if duplacate accounts can be made 
     assertFalse("Duplacate Made",testFacade.createAccount("Username1", "first", "Last", "@email", "U5555",UserType.STUDENT,"1234"));
 }
-
+@Test
+public void addadviseTest() {
+    facade testFacade = new facade();
+    testFacade.createAccount( "advisor","name", "last", "@email", "u283048", UserType.ADVISOR, "12345");
+    testFacade.login("advisor", "12345");
+    assertFalse(testFacade.addadvise(null));
+}
 
 
 

@@ -1,1 +1,29 @@
-[]
+[
+    {
+        "Name": "Computer Science",
+        "Majorid": "dad6314f-f5d5-49ec-a922-fddcce5068b0",
+        "Courses": [
+            "de2bd333-178b-43bc-8709-b153df4527ce", 
+            "5038e79d-df2e-47d0-88d6-ab3c10dba718",
+            "a2db5d52-8dea-499d-aacf-49369bf65d22",
+            "c6cd74bf-7819-498b-a0d9-4f051153735d",
+            "978e7047-d3fa-43b4-b1a0-22a2b012c068",
+            "92a154b1-6704-4443-a4df-43f81e0f3cda",
+            "8627844d-13d7-4571-b654-722a340ad0ea"
+          ]
+     
+    }, 
+    {
+        "Name": "Computer Information Systems",
+        "Majorid": "76cfc24e-e58e-41fb-88a3-29ba1f68c718",
+        "Courses": [
+            "0a493562-a981-4152-b06b-80345546e078",
+            "5038e79d-df2e-47d0-88d6-ab3c10dba718",
+            "a2db5d52-8dea-499d-aacf-49369bf65d22",
+            "c6cd74bf-7819-498b-a0d9-4f051153735d",
+            "8627844d-13d7-4571-b654-722a340ad0ea",
+            "07fb3566-bb2d-40c6-a63d-14aa7bcc2951"
+        ]
+    }
+    ]
+    
